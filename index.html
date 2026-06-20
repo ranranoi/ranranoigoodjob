@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>채용공고 정찰 기록</title>
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+  :root {
+    --bg: #F5F6F8;
+    --surface: #FFFFFF;
+    --border: #E7E9ED;
+    --blue: #3661EB;
+    --blue-deep: #2546B8;
+    --blue-soft: #EEF1FE;
+    --blue-soft-text: #3661EB;
+    --green: #16A34A;
+    --green-soft: #E9F8EE;
+    --red: #DC2626;
+    --red-soft: #FDECEC;
+    --text-1: #18181B;
+    --text-2: #5B5E68;
+    --text-3: #9498A3;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text-1);
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--blue);
+    background: var(--blue-soft);
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin: 0 0 18px;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: clamp(28px, 4.5vw, 40px);
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+  }
+
+  .subtitle {
+    color: var(--text-2);
+    font-size: 16px;
+    margin: 0 0 32px;
+  }
+
+  .status-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-2);
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .dot--ok { background: var(--green); }
+  .dot--err { background: var(--red); }
+  .dot--idle { background: var(--text-3); }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin-bottom: 56px;
+  }
+
+  .stat-cell {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+  }
+
+  .stat-num {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-1);
+    letter-spacing: -0.02em;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    color: var(--text-2);
+    margin-top: 4px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+
+  .section-desc {
+    font-size: 14px;
+    color: var(--text-2);
+    margin: 0 0 24px;
+  }
+
+  section { margin-bottom: 64px; }
+
+  .histo {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .histo-row {
+    display: grid;
+    grid-template-columns: 64px 1fr 40px;
+    align-items: center;
+    gap: 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-2);
+  }
+
+  .histo-track {
+    height: 8px;
+    background: var(--bg);
+    border-radius: 100px;
+    overflow: hidden;
+  }
+
+  .histo-fill {
+    height: 100%;
+    background: var(--blue);
+    border-radius: 100px;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    color: var(--text-1);
+    transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 24px rgba(24, 24, 27, 0.08);
+    border-color: var(--border);
+    transform: translateY(-2px);
+  }
+
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .score-pill {
+    flex-shrink: 0;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 100px;
+    background: var(--blue-soft);
+    color: var(--blue-soft-text);
+  }
+  .score-pill.high {
+    background: var(--blue);
+    color: #fff;
+  }
+
+  .card-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+
+  .card-meta {
+    font-size: 13px;
+    color: var(--text-2);
+    margin-bottom: 12px;
+  }
+
+  .card-reason {
+    font-size: 13px;
+    color: var(--text-2);
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+    margin: 0;
+  }
+
+  .card-source {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-3);
+  }
+
+  .source-tag {
+    background: var(--bg);
+    border-radius: 6px;
+    padding: 2px 8px;
+    color: var(--text-2);
+  }
+
+  .toggle-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .toggle-btn {
+    font-size: 13px;
+    font-weight: 600;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-2);
+    border-radius: 100px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  .toggle-btn.active {
+    background: var(--blue);
+    border-color: var(--blue);
+    color: #fff;
+  }
+
+  .log {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .log-entry {
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .log-entry:last-child { border-bottom: none; }
+
+  .log-dot {
+    margin-top: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .log-entry.ok .log-dot { background: var(--green); }
+  .log-entry.err .log-dot { background: var(--red); }
+
+  .log-time {
+    font-size: 13px;
+    color: var(--text-3);
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+
+  .log-summary {
+    font-size: 14px;
+    color: var(--text-1);
+  }
+
+  .log-error {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--red);
+    background: var(--red-soft);
+    border-radius: 8px;
+    padding: 8px 12px;
+  }
+
+  .empty {
+    text-align: center;
+    padding: 64px 20px;
+    color: var(--text-2);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+  }
+  .empty-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-1);
+    margin-bottom: 8px;
+  }
+
+  footer {
+    margin-top: 80px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-3);
+  }
+
+  a { color: inherit; }
+
+  @media (max-width: 600px) {
+    .wrap { padding: 36px 16px 64px; }
+    .histo { padding: 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <span class="eyebrow">JOB ALERT DASHBOARD</span>
+  <h1>채용공고 정찰 기록</h1>
+  <p class="subtitle">사람인·원티드를 매일 훑고, Gemini가 점수를 매긴 결과를 모아두는 자리</p>
+
+  <div id="status-row" class="status-row"></div>
+  <div id="stat-grid" class="stat-grid"></div>
+
+  <section id="histo-section" style="display:none;">
+    <p class="section-title">점수 분포</p>
+    <p class="section-desc">지금까지 발송 기준(70점)을 넘긴 공고들의 점수대별 분포</p>
+    <div id="histo" class="histo"></div>
+  </section>
+
+  <section>
+    <p class="section-title">오늘의 추천 공고</p>
+    <p class="section-desc">기준 점수를 넘겨 메일로 보낸 공고들</p>
+    <div class="toggle-row">
+      <button class="toggle-btn active" data-sort="recent">최신순</button>
+      <button class="toggle-btn" data-sort="score">점수순</button>
+    </div>
+    <div id="board"></div>
+  </section>
+
+  <section>
+    <p class="section-title">실행 로그</p>
+    <p class="section-desc">최근 자동 실행 기록 (성공/실패, 수집·채점 건수)</p>
+    <div id="log" class="log"></div>
+  </section>
+
+  <footer id="footer"></footer>
+</div>
+
+<script>
+const SOURCE_LABEL = { saramin: '사람인', wanted: '원티드' };
+
+function fmtDate(iso) {
+  if (!iso) return '-';
+  const d = new Date(iso);
+  const pad = n => String(n).padStart(2, '0');
+  return `${d.getFullYear()}.${pad(d.getMonth()+1)}.${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+}
+
+function relTime(iso) {
+  if (!iso) return '';
+  const diffMs = Date.now() - new Date(iso).getTime();
+  const mins = Math.round(diffMs / 60000);
+  if (mins < 60) return `${mins}분 전`;
+  const hours = Math.round(mins / 60);
+  if (hours < 48) return `${hours}시간 전`;
+  return `${Math.round(hours / 24)}일 전`;
+}
+
+function renderEmpty() {
+  document.getElementById('status-row').innerHTML = `
+    <span class="dot dot--idle"></span> 아직 실행 기록이 없습니다
+  `;
+  document.getElementById('stat-grid').style.display = 'none';
+  document.getElementById('board').innerHTML = `
+    <div class="empty">
+      <p class="empty-title">아직 정찰 기록이 없어요</p>
+      <p>GitHub Actions에서 첫 실행이 끝나면 이 자리에 결과가 채워집니다.<br>
+      Actions 탭에서 "Run workflow"로 수동 실행해보세요.</p>
+    </div>
+  `;
+  document.getElementById('log').innerHTML = '';
+}
+
+function renderStatus(data) {
+  const latest = data.runs[0];
+  const row = document.getElementById('status-row');
+  if (!latest) { row.innerHTML = '<span class="dot dot--idle"></span> 대기 중'; return; }
+
+  const dotClass = latest.status === 'success' ? 'dot--ok' : 'dot--err';
+  const label = latest.status === 'success' ? '정상 작동' : '마지막 실행 실패';
+  row.innerHTML = `
+    <span class="dot ${dotClass}"></span>
+    <span>${label}</span>
+    <span style="color:var(--text-3)">·</span>
+    <span>마지막 실행 ${fmtDate(latest.timestamp)} (${relTime(latest.timestamp)})</span>
+  `;
+}
+
+function renderStats(data) {
+  const t = data.totals || {};
+  const latest = data.runs[0] || {};
+  const cells = [
+    { num: latest.matched_count ?? 0, label: '이번 실행 매칭' },
+    { num: latest.new_count ?? 0, label: '이번 실행 신규 공고' },
+    { num: t.runs ?? 0, label: '누적 실행 횟수' },
+    { num: t.jobs_matched ?? 0, label: '누적 매칭 공고' },
+    { num: t.emails_sent ?? 0, label: '누적 메일 발송' },
+  ];
+  document.getElementById('stat-grid').innerHTML = cells.map(c => `
+    <div class="stat-cell">
+      <div class="stat-num">${c.num}</div>
+      <div class="stat-label">${c.label}</div>
+    </div>
+  `).join('');
+}
+
+function renderHisto(data) {
+  const scores = data.matches.map(m => m.score);
+  if (!scores.length) return;
+  const buckets = [
+    { label: '70-79', min: 70, max: 79 },
+    { label: '80-89', min: 80, max: 89 },
+    { label: '90-100', min: 90, max: 100 },
+  ];
+  const counts = buckets.map(b => scores.filter(s => s >= b.min && s <= b.max).length);
+  const max = Math.max(...counts, 1);
+
+  document.getElementById('histo-section').style.display = 'block';
+  document.getElementById('histo').innerHTML = buckets.map((b, i) => `
+    <div class="histo-row">
+      <span>${b.label}</span>
+      <span class="histo-track"><span class="histo-fill" style="width:${(counts[i]/max*100).toFixed(0)}%"></span></span>
+      <span style="text-align:right">${counts[i]}건</span>
+    </div>
+  `).join('');
+}
+
+function renderBoard(data, sortBy) {
+  const board = document.getElementById('board');
+  const matches = [...data.matches];
+
+  if (!matches.length) {
+    board.innerHTML = `
+      <div class="empty">
+        <p class="empty-title">아직 기준 점수를 넘긴 공고가 없어요</p>
+        <p>조건에 맞는 새 공고가 올라오면 여기에 카드가 쌓입니다.</p>
+      </div>
+    `;
+    return;
+  }
+
+  if (sortBy === 'score') {
+    matches.sort((a, b) => b.score - a.score);
+  }
+
+  board.innerHTML = `<div class="card-grid">${matches.map(m => `
+    <a class="card" href="${m.url}" target="_blank" rel="noopener">
+      <div class="card-top">
+        <p class="card-title">${m.title}</p>
+        <span class="score-pill ${m.score >= 85 ? 'high' : ''}">${m.score}점</span>
+      </div>
+      <p class="card-meta">${m.company} · ${m.location}</p>
+      <p class="card-reason">${m.reason || ''}</p>
+      <span class="card-source">
+        <span class="source-tag">${SOURCE_LABEL[m.source] || m.source}</span>
+        ${relTime(m.scored_at)}
+      </span>
+    </a>
+  `).join('')}</div>`;
+}
+
+function renderLog(data) {
+  const log = document.getElementById('log');
+  if (!data.runs.length) { log.innerHTML = ''; return; }
+
+  log.innerHTML = data.runs.map(r => `
+    <div class="log-entry ${r.status === 'success' ? 'ok' : 'err'}">
+      <span class="log-dot"></span>
+      <div>
+        <div class="log-time">${fmtDate(r.timestamp)}</div>
+        <div class="log-summary">
+          수집 ${(r.saramin_count||0) + (r.wanted_count||0)}건
+          · 신규 ${r.new_count||0}건
+          · 채점 ${(r.scores||[]).length}건
+          · 매칭 ${r.matched_count||0}건
+          · 메일 ${r.email_sent ? '발송함' : '발송 안 함'}
+        </div>
+        ${r.error ? `<div class="log-error">${r.error}</div>` : ''}
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderFooter(data) {
+  document.getElementById('footer').textContent =
+    data.last_updated ? `마지막 데이터 갱신: ${fmtDate(data.last_updated)}` : '';
+}
+
+async function init() {
+  let data;
+  try {
+    const res = await fetch('./dashboard_data.json?t=' + Date.now());
+    data = await res.json();
+  } catch (e) {
+    renderEmpty();
+    return;
+  }
+
+  if (!data.runs || data.runs.length === 0) {
+    renderEmpty();
+    return;
+  }
+
+  renderStatus(data);
+  renderStats(data);
+  renderHisto(data);
+  renderBoard(data, 'recent');
+  renderLog(data);
+  renderFooter(data);
+
+  document.querySelectorAll('.toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderBoard(data, btn.dataset.sort);
+    });
+  });
+}
+
+init();
+</script>
+</body>
+</html>

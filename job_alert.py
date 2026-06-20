@@ -31,6 +31,7 @@ RECEIVER_EMAIL = os.environ.get("RECEIVER_EMAIL") or "ranplus7@gmail.com"
 
 SEEN_JOBS_PATH = os.path.join(os.path.dirname(__file__), "seen_jobs.json")
 PROFILE_PATH = os.path.join(os.path.dirname(__file__), "candidate_profile.txt")
+DASHBOARD_PATH = os.path.join(os.path.dirname(__file__), "dashboard_data.json")
 
 SCORE_THRESHOLD = int(os.environ.get("SCORE_THRESHOLD", "70"))
 SEND_EMPTY_EMAIL = os.environ.get("SEND_EMPTY_EMAIL", "false").lower() == "true"
@@ -64,6 +65,20 @@ def load_seen():
 def save_seen(seen):
     with open(SEEN_JOBS_PATH, "w", encoding="utf-8") as f:
         json.dump(seen, f, ensure_ascii=False, indent=2)
+
+
+def load_dashboard():
+    try:
+        with open(DASHBOARD_PATH, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {"runs": [], "matches": [], "totals": {"runs": 0, "jobs_matched": 0, "emails_sent": 0}, "last_updated": None}
+
+
+def save_dashboard(dashboard):
+    dashboard["last_updated"] = __import__("datetime").datetime.utcnow().isoformat() + "Z"
+    with open(DASHBOARD_PATH, "w", encoding="utf-8") as f:
+        json.dump(dashboard, f, ensure_ascii=False, indent=2)
 
 
 def location_ok(location_text: str) -> bool:
@@ -318,8 +333,10 @@ def send_email(scored_jobs):
 # 메인
 # ---------------------------------------------------------------------------
 def main():
+    import datetime
     seen = load_seen()
     profile_text = load_profile()
+    dashboard = load_dashboard()
 
     print("사람인 공고 수집 중...")
     saramin_jobs = fetch_saramin_jobs()
@@ -336,19 +353,66 @@ def main():
     print(f"신규 공고: {len(new_jobs)}건")
 
     scored_jobs = []
+    all_scores = []
+    now_iso = datetime.datetime.utcnow().isoformat() + "Z"
     for job in new_jobs:
         score, reason = score_job_with_gemini(job, profile_text)
         print(f"  - [{score}점] {job['title']} ({job['company']}) — {reason}")
+        all_scores.append(score)
         if score >= SCORE_THRESHOLD:
             scored_jobs.append((job, score, reason))
+            dashboard["matches"].append({
+                "title": job["title"],
+                "company": job["company"],
+                "location": job.get("location", ""),
+                "url": job["url"],
+                "source": job["source"],
+                "score": score,
+                "reason": reason,
+                "scored_at": now_iso,
+            })
         # 점수와 무관하게 한 번 채점한 공고는 다시 보내지 않도록 seen에 기록
         seen.setdefault(job["source"], []).append(job["id"])
         time.sleep(0.3)
 
     scored_jobs.sort(key=lambda x: x[1], reverse=True)
 
-    send_email(scored_jobs)
+    email_sent = False
+    try:
+        send_email(scored_jobs)
+        email_sent = bool(scored_jobs) or SEND_EMPTY_EMAIL
+    except Exception as e:
+        print(f"[오류] 이메일 발송 실패: {e}")
+        _update_dashboard_run(dashboard, saramin_jobs, wanted_jobs, new_jobs, all_scores, scored_jobs, False, now_iso, str(e))
+        save_dashboard(dashboard)
+        save_seen(seen)
+        raise
+
+    _update_dashboard_run(dashboard, saramin_jobs, wanted_jobs, new_jobs, all_scores, scored_jobs, email_sent, now_iso, None)
+    save_dashboard(dashboard)
     save_seen(seen)
+
+
+def _update_dashboard_run(dashboard, saramin_jobs, wanted_jobs, new_jobs, all_scores, scored_jobs, email_sent, timestamp, error):
+    run_entry = {
+        "status": "error" if error else "success",
+        "timestamp": timestamp,
+        "saramin_count": len(saramin_jobs),
+        "wanted_count": len(wanted_jobs),
+        "new_count": len(new_jobs),
+        "scores": all_scores,
+        "matched_count": len(scored_jobs),
+        "email_sent": email_sent,
+    }
+    if error:
+        run_entry["error"] = error
+    dashboard["runs"].insert(0, run_entry)
+    dashboard["runs"] = dashboard["runs"][:50]  # 최근 50회만 보관
+    t = dashboard.setdefault("totals", {"runs": 0, "jobs_matched": 0, "emails_sent": 0})
+    t["runs"] = t.get("runs", 0) + 1
+    t["jobs_matched"] = t.get("jobs_matched", 0) + len(scored_jobs)
+    if email_sent:
+        t["emails_sent"] = t.get("emails_sent", 0) + 1
 
 
 if __name__ == "__main__":
