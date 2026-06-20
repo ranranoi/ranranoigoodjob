@@ -1,0 +1,42 @@
+name: Daily Job Alert
+
+on:
+  schedule:
+    # UTC 23:00 = KST 08:00 (다음날)
+    - cron: "0 23 * * *"
+  workflow_dispatch: {}  # 수동 실행 버튼 (테스트용)
+
+permissions:
+  contents: write  # seen_jobs.json 변경사항을 저장소에 커밋하기 위해 필요
+
+jobs:
+  run-job-alert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+
+      - name: 파이썬 설정
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 의존성 설치
+        run: pip install -r requirements.txt
+
+      - name: 채용공고 알리미 실행
+        env:
+          SARAMIN_API_KEY: ${{ secrets.SARAMIN_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECEIVER_EMAIL: ${{ secrets.RECEIVER_EMAIL }}
+        run: python job_alert.py
+
+      - name: 중복 방지 기록 커밋
+        run: |
+          git config user.name "job-alert-bot"
+          git config user.email "actions@github.com"
+          git add seen_jobs.json
+          git diff --quiet --cached || git commit -m "chore: update seen_jobs.json [skip ci]"
+          git push
