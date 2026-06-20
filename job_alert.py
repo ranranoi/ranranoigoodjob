@@ -22,8 +22,9 @@ from email.mime.multipart import MIMEMultipart
 # ---------------------------------------------------------------------------
 # 설정 (환경변수 / 시크릿으로 주입됨 — GitHub Actions의 secrets 참고)
 # ---------------------------------------------------------------------------
-SARAMIN_API_KEY = os.environ.get("SARAMIN_API_KEY", "")
-ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
+SARAMIN_API_KEY = os.environ.get("SARAMIN_API_KEY", "")  # 아직 없으면 비워둬도 됨 (사람인만 건너뜀)
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 GMAIL_USER = os.environ.get("GMAIL_USER", "")
 GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "")
 RECEIVER_EMAIL = os.environ.get("RECEIVER_EMAIL", "ranplus7@gmail.com")
@@ -191,16 +192,16 @@ def fetch_wanted_jobs():
 
 
 # ---------------------------------------------------------------------------
-# 3. Claude API로 적합도 채점
+# 3. Gemini API로 적합도 채점
 # ---------------------------------------------------------------------------
 def load_profile():
     with open(PROFILE_PATH, "r", encoding="utf-8") as f:
         return f.read()
 
 
-def score_job_with_claude(job, profile_text):
-    if not ANTHROPIC_API_KEY:
-        print("[경고] ANTHROPIC_API_KEY가 없어 적합도 채점을 건너뜁니다 (모두 통과 처리).")
+def score_job_with_gemini(job, profile_text):
+    if not GEMINI_API_KEY:
+        print("[경고] GEMINI_API_KEY가 없어 적합도 채점을 건너뜁니다 (모두 통과 처리).")
         return 100, "AI 채점 비활성화 상태(키 없음)"
 
     prompt = f"""아래는 구직자의 프로필과 채용공고 정보입니다.
@@ -223,31 +224,28 @@ def score_job_with_claude(job, profile_text):
 
     try:
         resp = requests.post(
-            "https://api.anthropic.com/v1/messages",
-            headers={
-                "x-api-key": ANTHROPIC_API_KEY,
-                "anthropic-version": "2023-06-01",
-                "content-type": "application/json",
-            },
+            f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent",
+            params={"key": GEMINI_API_KEY},
+            headers={"content-type": "application/json"},
             json={
-                "model": "claude-sonnet-4-6",
-                "max_tokens": 200,
-                "messages": [{"role": "user", "content": prompt}],
+                "contents": [{"parts": [{"text": prompt}]}],
+                "generationConfig": {
+                    "responseMimeType": "application/json",  # JSON 강제 출력 → 파싱 실패 줄임
+                    "temperature": 0.2,
+                },
             },
             timeout=30,
         )
         resp.raise_for_status()
         data = resp.json()
-        text = "".join(
-            block.get("text", "") for block in data.get("content", []) if block.get("type") == "text"
-        ).strip()
+        text = data["candidates"][0]["content"]["parts"][0]["text"].strip()
 
-        # 모델이 코드블록(```json ... ```)으로 감싸는 경우 대비
+        # 혹시 코드블록(```json ... ```)으로 감싸져 오는 경우 대비
         text = text.replace("```json", "").replace("```", "").strip()
         parsed = json.loads(text)
         return int(parsed.get("score", 0)), parsed.get("reason", "")
     except Exception as e:
-        print(f"[경고] Claude 채점 실패 ({job['title']}): {e}")
+        print(f"[경고] Gemini 채점 실패 ({job['title']}): {e}")
         return 0, "채점 실패"
 
 
@@ -339,7 +337,7 @@ def main():
 
     scored_jobs = []
     for job in new_jobs:
-        score, reason = score_job_with_claude(job, profile_text)
+        score, reason = score_job_with_gemini(job, profile_text)
         print(f"  - [{score}점] {job['title']} ({job['company']}) — {reason}")
         if score >= SCORE_THRESHOLD:
             scored_jobs.append((job, score, reason))
