@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>거지탈출</title>
+<title>꾸준함의 승리</title>
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <style>
   :root {
@@ -11,7 +11,6 @@
     --surface: #FFFFFF;
     --border: #E7E9ED;
     --blue: #3661EB;
-    --blue-deep: #2546B8;
     --blue-soft: #EEF1FE;
     --blue-soft-text: #3661EB;
     --green: #16A34A;
@@ -53,7 +52,7 @@
 
   h1 {
     font-weight: 700;
-    font-size: clamp(28px, 4.5vw, 40px);
+    font-size: 28px;
     letter-spacing: -0.02em;
     margin: 0 0 10px;
   }
@@ -76,42 +75,27 @@
   }
 
   .dot {
-    width: 8px;
-    height: 8px;
+    width: 8px; height: 8px;
     border-radius: 50%;
     display: inline-block;
     flex-shrink: 0;
   }
-  .dot--ok { background: var(--green); }
+  .dot--ok  { background: var(--green); }
   .dot--err { background: var(--red); }
-  .dot--idle { background: var(--text-3); }
+  .dot--idle{ background: var(--text-3); }
 
-  .stat-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 12px;
-    margin-bottom: 56px;
-  }
-
-  .stat-cell {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 20px;
-  }
-
-  .stat-num {
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--text-1);
-    letter-spacing: -0.02em;
-  }
-
-  .stat-label {
+  /* 수치 요약 — 맨 아래 텍스트형 */
+  .mini-stats {
     font-size: 13px;
     color: var(--text-2);
-    margin-top: 4px;
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
   }
+  .mini-stats strong { color: var(--text-1); font-weight: 700; }
 
   .section-title {
     font-size: 20px;
@@ -119,7 +103,6 @@
     margin: 0 0 4px;
     letter-spacing: -0.01em;
   }
-
   .section-desc {
     font-size: 14px;
     color: var(--text-2);
@@ -128,6 +111,7 @@
 
   section { margin-bottom: 64px; }
 
+  /* 점수 분포 */
   .histo {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -137,7 +121,6 @@
     flex-direction: column;
     gap: 14px;
   }
-
   .histo-row {
     display: grid;
     grid-template-columns: 64px 1fr 40px;
@@ -147,43 +130,37 @@
     font-weight: 500;
     color: var(--text-2);
   }
-
   .histo-track {
     height: 8px;
     background: var(--bg);
     border-radius: 100px;
     overflow: hidden;
   }
-
   .histo-fill {
     height: 100%;
     background: var(--blue);
     border-radius: 100px;
   }
 
+  /* 공고 카드 */
   .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 16px;
   }
-
   .card {
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 20px;
-    text-decoration: none;
     display: block;
     color: var(--text-1);
-    transition: box-shadow 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
   }
-
   .card:hover {
-    box-shadow: 0 8px 24px rgba(24, 24, 27, 0.08);
-    border-color: var(--border);
+    box-shadow: 0 8px 24px rgba(24,24,27,0.08);
     transform: translateY(-2px);
   }
-
   .card-top {
     display: flex;
     justify-content: space-between;
@@ -191,7 +168,6 @@
     gap: 10px;
     margin-bottom: 10px;
   }
-
   .score-pill {
     flex-shrink: 0;
     font-size: 12px;
@@ -201,24 +177,13 @@
     background: var(--blue-soft);
     color: var(--blue-soft-text);
   }
-  .score-pill.high {
-    background: var(--blue);
-    color: #fff;
-  }
+  .score-pill.high { background: var(--blue); color: #fff; }
 
-  .card-title {
-    font-size: 16px;
-    font-weight: 700;
-    margin: 0 0 6px;
-    letter-spacing: -0.01em;
-  }
+  .card-title { font-size: 16px; font-weight: 700; margin: 0 0 6px; letter-spacing: -0.01em; }
+  .card-title a { text-decoration: none; color: inherit; }
+  .card-title a:hover { text-decoration: underline; }
 
-  .card-meta {
-    font-size: 13px;
-    color: var(--text-2);
-    margin-bottom: 12px;
-  }
-
+  .card-meta { font-size: 13px; color: var(--text-2); margin-bottom: 12px; }
   .card-reason {
     font-size: 13px;
     color: var(--text-2);
@@ -226,7 +191,6 @@
     padding-top: 12px;
     margin: 0;
   }
-
   .card-source {
     display: inline-flex;
     align-items: center;
@@ -236,7 +200,6 @@
     font-weight: 600;
     color: var(--text-3);
   }
-
   .source-tag {
     background: var(--bg);
     border-radius: 6px;
@@ -244,9 +207,7 @@
     color: var(--text-2);
   }
 
-  .card-title a { text-decoration: none; color: inherit; }
-  .card-title a:hover { text-decoration: underline; }
-
+  /* 액션 버튼 행 */
   .action-row {
     display: flex;
     gap: 6px;
@@ -266,112 +227,51 @@
     cursor: pointer;
     transition: background 0.15s, color 0.15s, border-color 0.15s;
   }
-  .action-btn.scrap.on { background: #FFF7ED; border-color: #F97316; color: #EA580C; }
-  .action-btn.apply.on { background: var(--green-soft); border-color: var(--green); color: var(--green); }
+  .action-btn.scrap.on  { background: #FFF7ED; border-color: #F97316; color: #EA580C; }
+  .action-btn.apply.on  { background: var(--green-soft); border-color: var(--green); color: var(--green); }
+  .action-btn.dismiss   { flex: 0 0 auto; padding: 7px 10px; color: var(--text-3); }
+  .action-btn.dismiss:hover { background: var(--red-soft); border-color: var(--red); color: var(--red); }
+
+  /* 필터/정렬 */
+  .toggle-row { display: flex; gap: 8px; margin-bottom: 12px; }
+  .toggle-btn {
+    font-size: 13px; font-weight: 600;
+    background: var(--surface); border: 1px solid var(--border);
+    color: var(--text-2); border-radius: 100px; padding: 8px 16px; cursor: pointer;
+  }
+  .toggle-btn.active { background: var(--blue); border-color: var(--blue); color: #fff; }
 
   .filter-row { display: flex; gap: 6px; margin-bottom: 20px; flex-wrap: wrap; }
   .filter-btn {
-    font-size: 13px;
-    font-weight: 600;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text-2);
-    border-radius: 100px;
-    padding: 7px 16px;
-    cursor: pointer;
+    font-size: 13px; font-weight: 600;
+    background: var(--surface); border: 1px solid var(--border);
+    color: var(--text-2); border-radius: 100px; padding: 7px 16px; cursor: pointer;
   }
   .filter-btn.active { background: var(--text-1); border-color: var(--text-1); color: #fff; }
 
-  .toggle-row {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 20px;
-  }
-
-  .toggle-btn {
-    font-size: 13px;
-    font-weight: 600;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    color: var(--text-2);
-    border-radius: 100px;
-    padding: 8px 16px;
-    cursor: pointer;
-  }
-  .toggle-btn.active {
-    background: var(--blue);
-    border-color: var(--blue);
-    color: #fff;
-  }
-
-  .log {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    overflow: hidden;
-  }
-
+  /* 실행 로그 */
+  .log { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
   .log-entry {
-    padding: 18px 22px;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
+    padding: 18px 22px; border-bottom: 1px solid var(--border);
+    display: flex; gap: 14px; align-items: flex-start;
   }
   .log-entry:last-child { border-bottom: none; }
-
-  .log-dot {
-    margin-top: 6px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-  .log-entry.ok .log-dot { background: var(--green); }
+  .log-dot { margin-top: 6px; width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .log-entry.ok  .log-dot { background: var(--green); }
   .log-entry.err .log-dot { background: var(--red); }
-
-  .log-time {
-    font-size: 13px;
-    color: var(--text-3);
-    margin-bottom: 4px;
-    font-weight: 500;
-  }
-
-  .log-summary {
-    font-size: 14px;
-    color: var(--text-1);
-  }
-
-  .log-error {
-    margin-top: 8px;
-    font-size: 13px;
-    color: var(--red);
-    background: var(--red-soft);
-    border-radius: 8px;
-    padding: 8px 12px;
-  }
+  .log-time    { font-size: 13px; color: var(--text-3); margin-bottom: 4px; font-weight: 500; }
+  .log-summary { font-size: 14px; color: var(--text-1); }
+  .log-error   { margin-top: 8px; font-size: 13px; color: var(--red); background: var(--red-soft); border-radius: 8px; padding: 8px 12px; }
 
   .empty {
-    text-align: center;
-    padding: 64px 20px;
-    color: var(--text-2);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
+    text-align: center; padding: 64px 20px; color: var(--text-2);
+    background: var(--surface); border: 1px solid var(--border); border-radius: 16px;
   }
-  .empty-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--text-1);
-    margin-bottom: 8px;
-  }
+  .empty-title { font-size: 18px; font-weight: 700; color: var(--text-1); margin-bottom: 8px; }
 
   footer {
-    margin-top: 80px;
-    padding-top: 24px;
-    border-top: 1px solid var(--border);
-    font-size: 12px;
-    color: var(--text-3);
+    margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border);
+    font-size: 12px; color: var(--text-3);
   }
 
   a { color: inherit; }
@@ -386,11 +286,10 @@
 <div class="wrap">
 
   <span class="eyebrow">JOB ALERT DASHBOARD</span>
-  <h1>거지탈출</h1>
-  <p class="subtitle">사람인·원티드를 매일 훑고, Gemini가 점수를 매긴 결과를 모아두는 자리</p>
+  <h1>꾸준함의 승리</h1>
+  <p class="subtitle">멈춤이 아니라 성장의 단계다 화이팅~!</p>
 
   <div id="status-row" class="status-row"></div>
-  <div id="stat-grid" class="stat-grid"></div>
 
   <section id="histo-section" style="display:none;">
     <p class="section-title">점수 분포</p>
@@ -419,6 +318,8 @@
     <div id="log" class="log"></div>
   </section>
 
+  <div id="mini-stats" class="mini-stats"></div>
+
   <footer id="footer"></footer>
 </div>
 
@@ -443,15 +344,11 @@ function relTime(iso) {
 }
 
 function renderEmpty() {
-  document.getElementById('status-row').innerHTML = `
-    <span class="dot dot--idle"></span> 아직 실행 기록이 없습니다
-  `;
-  document.getElementById('stat-grid').style.display = 'none';
+  document.getElementById('status-row').innerHTML = `<span class="dot dot--idle"></span> 아직 실행 기록이 없습니다`;
   document.getElementById('board').innerHTML = `
     <div class="empty">
       <p class="empty-title">아직 정찰 기록이 없어요</p>
-      <p>GitHub Actions에서 첫 실행이 끝나면 이 자리에 결과가 채워집니다.<br>
-      Actions 탭에서 "Run workflow"로 수동 실행해보세요.</p>
+      <p>GitHub Actions에서 첫 실행이 끝나면 이 자리에 결과가 채워집니다.</p>
     </div>
   `;
   document.getElementById('log').innerHTML = '';
@@ -461,7 +358,6 @@ function renderStatus(data) {
   const latest = data.runs[0];
   const row = document.getElementById('status-row');
   if (!latest) { row.innerHTML = '<span class="dot dot--idle"></span> 대기 중'; return; }
-
   const dotClass = latest.status === 'success' ? 'dot--ok' : 'dot--err';
   const label = latest.status === 'success' ? '정상 작동' : '마지막 실행 실패';
   row.innerHTML = `
@@ -475,19 +371,10 @@ function renderStatus(data) {
 function renderStats(data) {
   const t = data.totals || {};
   const latest = data.runs[0] || {};
-  const cells = [
-    { num: latest.matched_count ?? 0, label: '이번 실행 매칭' },
-    { num: latest.new_count ?? 0, label: '이번 실행 신규 공고' },
-    { num: t.runs ?? 0, label: '누적 실행 횟수' },
-    { num: t.jobs_matched ?? 0, label: '누적 매칭 공고' },
-    { num: t.emails_sent ?? 0, label: '누적 메일 발송' },
-  ];
-  document.getElementById('stat-grid').innerHTML = cells.map(c => `
-    <div class="stat-cell">
-      <div class="stat-num">${c.num}</div>
-      <div class="stat-label">${c.label}</div>
-    </div>
-  `).join('');
+  document.getElementById('mini-stats').innerHTML = `
+    <span>이번 실행 신규 공고: <strong>${latest.new_count ?? 0}건</strong></span>
+    <span>누적 매칭 공고: <strong>${t.jobs_matched ?? 0}건</strong></span>
+  `;
 }
 
 function renderHisto(data) {
@@ -500,7 +387,6 @@ function renderHisto(data) {
   ];
   const counts = buckets.map(b => scores.filter(s => s >= b.min && s <= b.max).length);
   const max = Math.max(...counts, 1);
-
   document.getElementById('histo-section').style.display = 'block';
   document.getElementById('histo').innerHTML = buckets.map((b, i) => `
     <div class="histo-row">
@@ -521,7 +407,9 @@ let _bd = null, _bs = 'recent', _bf = 'all';
 function renderBoard(data, sortBy, filterBy) {
   _bd = data; _bs = sortBy; _bf = filterBy;
   const board = document.getElementById('board');
-  let matches = [...data.matches];
+  const actions = loadActions();
+
+  let matches = data.matches.filter(m => !actions[m.url]?.dismissed);
 
   if (!matches.length) {
     board.innerHTML = `
@@ -535,7 +423,6 @@ function renderBoard(data, sortBy, filterBy) {
 
   if (sortBy === 'score') matches.sort((a, b) => b.score - a.score);
 
-  const actions = loadActions();
   if (filterBy === 'scrap') matches = matches.filter(m => actions[m.url]?.scrap);
   else if (filterBy === 'apply') matches = matches.filter(m => actions[m.url]?.apply);
 
@@ -568,6 +455,7 @@ function renderBoard(data, sortBy, filterBy) {
       <div class="action-row">
         <button class="action-btn scrap${act.scrap ? ' on' : ''}" data-url="${m.url}" data-type="scrap">📌 ${act.scrap ? '스크랩됨' : '스크랩'}</button>
         <button class="action-btn apply${act.apply ? ' on' : ''}" data-url="${m.url}" data-type="apply">✓ ${act.apply ? '지원완료' : '지원하기'}</button>
+        <button class="action-btn dismiss" data-url="${m.url}" data-type="dismiss" title="삭제">✕</button>
       </div>
     </div>
   `}).join('')}</div>`;
@@ -576,7 +464,6 @@ function renderBoard(data, sortBy, filterBy) {
 function renderLog(data) {
   const log = document.getElementById('log');
   if (!data.runs.length) { log.innerHTML = ''; return; }
-
   log.innerHTML = data.runs.map(r => `
     <div class="log-entry ${r.status === 'success' ? 'ok' : 'err'}">
       <span class="log-dot"></span>
@@ -650,7 +537,15 @@ async function init() {
     if (!url || !type) return;
     const acts = loadActions();
     if (!acts[url]) acts[url] = {};
-    acts[url][type] = !acts[url][type];
+
+    if (type === 'dismiss') {
+      acts[url].dismissed = true;
+      acts[url].scrap = false;
+      acts[url].apply = false;
+    } else {
+      acts[url][type] = !acts[url][type];
+    }
+
     localStorage.setItem(LS_KEY, JSON.stringify(acts));
     renderBoard(data, curSort, curFilter);
   });
