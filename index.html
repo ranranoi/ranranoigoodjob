@@ -244,6 +244,44 @@
     color: var(--text-2);
   }
 
+  .card-title a { text-decoration: none; color: inherit; }
+  .card-title a:hover { text-decoration: underline; }
+
+  .action-row {
+    display: flex;
+    gap: 6px;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+  }
+  .action-btn {
+    flex: 1;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 7px 0;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-2);
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+  }
+  .action-btn.scrap.on { background: #FFF7ED; border-color: #F97316; color: #EA580C; }
+  .action-btn.apply.on { background: var(--green-soft); border-color: var(--green); color: var(--green); }
+
+  .filter-row { display: flex; gap: 6px; margin-bottom: 20px; flex-wrap: wrap; }
+  .filter-btn {
+    font-size: 13px;
+    font-weight: 600;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-2);
+    border-radius: 100px;
+    padding: 7px 16px;
+    cursor: pointer;
+  }
+  .filter-btn.active { background: var(--text-1); border-color: var(--text-1); color: #fff; }
+
   .toggle-row {
     display: flex;
     gap: 8px;
@@ -367,6 +405,11 @@
       <button class="toggle-btn active" data-sort="recent">최신순</button>
       <button class="toggle-btn" data-sort="score">점수순</button>
     </div>
+    <div class="filter-row">
+      <button class="filter-btn active" data-filter="all">전체</button>
+      <button class="filter-btn" data-filter="scrap">📌 스크랩</button>
+      <button class="filter-btn" data-filter="apply">✓ 지원완료</button>
+    </div>
     <div id="board"></div>
   </section>
 
@@ -468,9 +511,17 @@ function renderHisto(data) {
   `).join('');
 }
 
-function renderBoard(data, sortBy) {
+const LS_KEY = 'job_actions_v1';
+function loadActions() {
+  try { return JSON.parse(localStorage.getItem(LS_KEY) || '{}'); } catch { return {}; }
+}
+
+let _bd = null, _bs = 'recent', _bf = 'all';
+
+function renderBoard(data, sortBy, filterBy) {
+  _bd = data; _bs = sortBy; _bf = filterBy;
   const board = document.getElementById('board');
-  const matches = [...data.matches];
+  let matches = [...data.matches];
 
   if (!matches.length) {
     board.innerHTML = `
@@ -482,24 +533,44 @@ function renderBoard(data, sortBy) {
     return;
   }
 
-  if (sortBy === 'score') {
-    matches.sort((a, b) => b.score - a.score);
+  if (sortBy === 'score') matches.sort((a, b) => b.score - a.score);
+
+  const actions = loadActions();
+  if (filterBy === 'scrap') matches = matches.filter(m => actions[m.url]?.scrap);
+  else if (filterBy === 'apply') matches = matches.filter(m => actions[m.url]?.apply);
+
+  if (!matches.length) {
+    const label = filterBy === 'scrap' ? '스크랩한' : '지원 완료한';
+    board.innerHTML = `
+      <div class="empty">
+        <p class="empty-title">${label} 공고가 없어요</p>
+        <p>카드 하단 버튼으로 표시해보세요.</p>
+      </div>
+    `;
+    return;
   }
 
-  board.innerHTML = `<div class="card-grid">${matches.map(m => `
-    <a class="card" href="${m.url}" target="_blank" rel="noopener">
+  board.innerHTML = `<div class="card-grid">${matches.map(m => {
+    const act = actions[m.url] || {};
+    const emp = m.employee_count ? ` · ${m.employee_count}` : '';
+    return `
+    <div class="card">
       <div class="card-top">
-        <p class="card-title">${m.title}</p>
+        <p class="card-title"><a href="${m.url}" target="_blank" rel="noopener">${m.title}</a></p>
         <span class="score-pill ${m.score >= 85 ? 'high' : ''}">${m.score}점</span>
       </div>
-      <p class="card-meta">${m.company} · ${m.location}</p>
+      <p class="card-meta">${m.company} · ${m.location}${emp}</p>
       <p class="card-reason">${m.reason || ''}</p>
       <span class="card-source">
         <span class="source-tag">${SOURCE_LABEL[m.source] || m.source}</span>
         ${relTime(m.scored_at)}
       </span>
-    </a>
-  `).join('')}</div>`;
+      <div class="action-row">
+        <button class="action-btn scrap${act.scrap ? ' on' : ''}" data-url="${m.url}" data-type="scrap">📌 ${act.scrap ? '스크랩됨' : '스크랩'}</button>
+        <button class="action-btn apply${act.apply ? ' on' : ''}" data-url="${m.url}" data-type="apply">✓ ${act.apply ? '지원완료' : '지원하기'}</button>
+      </div>
+    </div>
+  `}).join('')}</div>`;
 }
 
 function renderLog(data) {
@@ -547,16 +618,41 @@ async function init() {
   renderStatus(data);
   renderStats(data);
   renderHisto(data);
-  renderBoard(data, 'recent');
+  renderBoard(data, 'recent', 'all');
   renderLog(data);
   renderFooter(data);
+
+  let curSort = 'recent', curFilter = 'all';
 
   document.querySelectorAll('.toggle-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      renderBoard(data, btn.dataset.sort);
+      curSort = btn.dataset.sort;
+      renderBoard(data, curSort, curFilter);
     });
+  });
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      curFilter = btn.dataset.filter;
+      renderBoard(data, curSort, curFilter);
+    });
+  });
+
+  document.getElementById('board').addEventListener('click', e => {
+    const btn = e.target.closest('.action-btn');
+    if (!btn) return;
+    const url = btn.dataset.url;
+    const type = btn.dataset.type;
+    if (!url || !type) return;
+    const acts = loadActions();
+    if (!acts[url]) acts[url] = {};
+    acts[url][type] = !acts[url][type];
+    localStorage.setItem(LS_KEY, JSON.stringify(acts));
+    renderBoard(data, curSort, curFilter);
   });
 }
 

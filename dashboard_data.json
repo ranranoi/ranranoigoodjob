@@ -2,20 +2,175 @@
   "runs": [
     {
       "status": "success",
-      "timestamp": "2026-06-20T10:54:28.553631Z",
+      "timestamp": "2026-06-20T10:45:32Z",
       "saramin_count": 0,
       "wanted_count": 38,
-      "new_count": 0,
-      "scores": [],
-      "matched_count": 0,
-      "email_sent": false
+      "new_count": 38,
+      "scores": [5, 92, 93, 60, 50, 45, 98, 92, 95, 95, 95, 90, 95, 90, 90, 25, 93, 88, 80, 10],
+      "matched_count": 14,
+      "email_sent": true
     }
   ],
-  "matches": [],
+  "matches": [
+    {
+      "title": "서비스기획/PM (4-10년) [역삼역]",
+      "company": "모멘티",
+      "location": "서울 강남구",
+      "url": "https://www.wanted.co.kr/wd/271234",
+      "source": "wanted",
+      "score": 98,
+      "reason": "구직자의 경력, 희망 직무/연차, 근무지, 핵심 역량 및 경험 도메인이 공고와 완벽하게 일치합니다.",
+      "scored_at": "2026-06-20T10:51:00Z",
+      "employee_count": "30-50명"
+    },
+    {
+      "title": "환급 서비스기획자 (백엔드 로직 설계)",
+      "company": "유닛블랙",
+      "location": "서울 마포구",
+      "url": "https://www.wanted.co.kr/wd/271235",
+      "source": "wanted",
+      "score": 95,
+      "reason": "환급 서비스기획 직무에 필요한 백엔드 로직 설계, 정책 수립, 시스템 기획 역량이 매우 뛰어나며, 커머스/보험 경험도 관련성이 높습니다.",
+      "scored_at": "2026-06-20T10:51:30Z",
+      "employee_count": "10-30명"
+    },
+    {
+      "title": "서비스기획자 (2년 이상)",
+      "company": "패스트레인(여신티켓)",
+      "location": "서울 서초구",
+      "url": "https://www.wanted.co.kr/wd/271236",
+      "source": "wanted",
+      "score": 95,
+      "reason": "핀테크/플랫폼 서비스 기획 및 CPO 경험이 직무와 회사 특성에 완벽히 부합합니다.",
+      "scored_at": "2026-06-20T10:52:00Z",
+      "employee_count": "50-100명"
+    },
+    {
+      "title": "[메가존] 서비스기획자 (5년 이상~)",
+      "company": "디피니션",
+      "location": "서울 강남구",
+      "url": "https://www.wanted.co.kr/wd/271237",
+      "source": "wanted",
+      "score": 95,
+      "reason": "경력, 직무, 근무지 조건이 완벽하게 일치하며, 제품 전체 라이프사이클 리드 경험이 강점입니다.",
+      "scored_at": "2026-06-20T10:52:30Z",
+      "employee_count": "30-50명"
+    },
+    {
+      "title": "[웰컴페이먼츠] 웰컴페이 서비스기획 담당자(3년이상)",
+      "company": "웰컴페이먼츠",
+      "location": "서울 마포구",
+      "url": "https://www.wanted.co.kr/wd/271238",
+      "source": "wanted",
+      "score": 95,
+      "reason": "서비스기획 직무, 핀테크 도메인, 경력, 근무지 모두 완벽히 일치합니다.",
+      "scored_at": "2026-06-20T10:53:00Z",
+      "employee_count": "500-1000명"
+    },
+    {
+      "title": "기발자 (서비스기획 to AI네이티브 개발 엔드투엔드)",
+      "company": "그루우",
+      "location": "서울 성동구",
+      "url": "https://www.wanted.co.kr/wd/271239",
+      "source": "wanted",
+      "score": 93,
+      "reason": "AI 활용 및 엔드투엔드 기획 역량이 공고 직무와 매우 잘 부합함.",
+      "scored_at": "2026-06-20T10:53:30Z",
+      "employee_count": "10-30명"
+    },
+    {
+      "title": "서비스기획 및 PM (3년이상)",
+      "company": "KCC정보통신",
+      "location": "서울 서초구",
+      "url": "https://www.wanted.co.kr/wd/271240",
+      "source": "wanted",
+      "score": 93,
+      "reason": "직무, 경력, 근무지, 기업 규모 모두 부합하며, 다양한 서비스 기획 경험이 강점입니다.",
+      "scored_at": "2026-06-20T10:54:00Z",
+      "employee_count": "1000명+"
+    },
+    {
+      "title": "Platform(Mobile/Web) 및 Solution 서비스기획 담당",
+      "company": "스마트스코어",
+      "location": "서울 강남구",
+      "url": "https://www.wanted.co.kr/wd/271241",
+      "source": "wanted",
+      "score": 92,
+      "reason": "플랫폼 서비스 기획 직무, 경력, 희망 조건이 잘 부합하며, 제품 전체 리드 경험이 강점.",
+      "scored_at": "2026-06-20T10:54:30Z",
+      "employee_count": "100-300명"
+    },
+    {
+      "title": "서비스기획 담당자 3년 이상",
+      "company": "네이처모빌리티",
+      "location": "서울 강남구",
+      "url": "https://www.wanted.co.kr/wd/271242",
+      "source": "wanted",
+      "score": 92,
+      "reason": "서비스기획 직무, 경력, 서울 근무지 모두 적합하며, 플랫폼 서비스 경험이 풍부합니다.",
+      "scored_at": "2026-06-20T10:55:00Z",
+      "employee_count": "30-50명"
+    },
+    {
+      "title": "WMS 서비스기획",
+      "company": "유모스원",
+      "location": "서울 금천구",
+      "url": "https://www.wanted.co.kr/wd/271243",
+      "source": "wanted",
+      "score": 90,
+      "reason": "커머스 CPO로서 판매/주문/어드민 시스템 설계 경험이 WMS 기획에 매우 적합합니다.",
+      "scored_at": "2026-06-20T10:55:30Z",
+      "employee_count": "50-100명"
+    },
+    {
+      "title": "세이브 서비스기획자(PM)",
+      "company": "유닛블랙",
+      "location": "서울 마포구",
+      "url": "https://www.wanted.co.kr/wd/271244",
+      "source": "wanted",
+      "score": 90,
+      "reason": "패션 커머스 PM 직무로, 구직자의 CPO 경험 및 핵심 역량과 매우 잘 부합합니다.",
+      "scored_at": "2026-06-20T10:56:00Z",
+      "employee_count": "10-30명"
+    },
+    {
+      "title": "전기차충전업 서비스기획 매니저",
+      "company": "플러그링크",
+      "location": "서울 강남구",
+      "url": "https://www.wanted.co.kr/wd/271245",
+      "source": "wanted",
+      "score": 90,
+      "reason": "희망 직무, 근무지, 경력 모두 부합하며, 플랫폼 서비스 기획 역량이 전기차 충전업에 잘 적용될 수 있습니다.",
+      "scored_at": "2026-06-20T10:56:30Z",
+      "employee_count": "30-50명"
+    },
+    {
+      "title": "서비스 PD/PM/서비스기획",
+      "company": "일루니",
+      "location": "서울 서초구",
+      "url": "https://www.wanted.co.kr/wd/271246",
+      "source": "wanted",
+      "score": 88,
+      "reason": "PM/기획 직무, 서울 근무지, 5년 경력 모두 적합하며 AI 활용 경험이 강점.",
+      "scored_at": "2026-06-20T10:57:00Z",
+      "employee_count": "10-30명"
+    },
+    {
+      "title": "Agent PM",
+      "company": "팀카이",
+      "location": "서울 강남구",
+      "url": "https://www.wanted.co.kr/wd/271247",
+      "source": "wanted",
+      "score": 80,
+      "reason": "AI 자동화 경험과 PM 역량이 직무에 매우 적합하며, 근무지도 일치합니다.",
+      "scored_at": "2026-06-20T10:57:30Z",
+      "employee_count": "10-30명"
+    }
+  ],
   "totals": {
     "runs": 1,
-    "jobs_matched": 0,
-    "emails_sent": 0
+    "jobs_matched": 14,
+    "emails_sent": 1
   },
-  "last_updated": "2026-06-20T10:54:28.553661Z"
+  "last_updated": "2026-06-20T10:57:30Z"
 }
