@@ -1,0 +1,21 @@
+{
+  "runs": [
+    {
+      "status": "success",
+      "timestamp": "2026-06-20T10:54:28.553631Z",
+      "saramin_count": 0,
+      "wanted_count": 38,
+      "new_count": 0,
+      "scores": [],
+      "matched_count": 0,
+      "email_sent": false
+    }
+  ],
+  "matches": [],
+  "totals": {
+    "runs": 1,
+    "jobs_matched": 0,
+    "emails_sent": 0
+  },
+  "last_updated": "2026-06-20T10:54:28.553661Z"
+}
