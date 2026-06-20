@@ -27,7 +27,7 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 GMAIL_USER = os.environ.get("GMAIL_USER", "")
 GMAIL_APP_PASSWORD = os.environ.get("GMAIL_APP_PASSWORD", "")
-RECEIVER_EMAIL = os.environ.get("RECEIVER_EMAIL", "ranplus7@gmail.com")
+RECEIVER_EMAIL = os.environ.get("RECEIVER_EMAIL") or "ranplus7@gmail.com"
 
 SEEN_JOBS_PATH = os.path.join(os.path.dirname(__file__), "seen_jobs.json")
 PROFILE_PATH = os.path.join(os.path.dirname(__file__), "candidate_profile.txt")
