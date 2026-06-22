@@ -2,6 +2,20 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-06-22T00:17:45.292522Z",
+      "saramin_count": 0,
+      "wanted_count": 35,
+      "new_count": 3,
+      "scores": [
+        88,
+        75,
+        5
+      ],
+      "matched_count": 2,
+      "email_sent": true
+    },
+    {
+      "status": "success",
       "timestamp": "2026-06-21T00:14:08.145338Z",
       "saramin_count": 0,
       "wanted_count": 35,
@@ -196,12 +210,32 @@
       "reason": "AI 자동화 경험과 PM 역량이 직무에 매우 적합하며, 근무지도 일치합니다.",
       "scored_at": "2026-06-20T10:57:30Z",
       "employee_count": "10-30명"
+    },
+    {
+      "title": "서비스기획",
+      "company": "트위닛",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/360473",
+      "source": "wanted",
+      "score": 88,
+      "reason": "서비스기획 역량과 AI 시스템 기획 경험이 AI 기업 트위닛에 매우 적합합니다.",
+      "scored_at": "2026-06-22T00:17:45.292522Z"
+    },
+    {
+      "title": "[홈쇼핑모아] 서비스기획 PO 시니어 (7년차 이상)",
+      "company": "버즈니(Buzzni)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/359589",
+      "source": "wanted",
+      "score": 75,
+      "reason": "커머스 PO 직무 및 도메인 적합하며 CPO 경험 우수하나, 시니어(7년차 이상) 경력 조건에 미달합니다.",
+      "scored_at": "2026-06-22T00:17:45.292522Z"
     }
   ],
   "totals": {
-    "runs": 2,
-    "jobs_matched": 14,
-    "emails_sent": 1
+    "runs": 3,
+    "jobs_matched": 16,
+    "emails_sent": 2
   },
-  "last_updated": "2026-06-21T00:14:08.145370Z"
+  "last_updated": "2026-06-22T00:18:14.549332Z"
 }
