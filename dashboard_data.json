@@ -2,6 +2,27 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-06-24T00:03:21.536791Z",
+      "saramin_count": 0,
+      "wanted_count": 37,
+      "new_count": 10,
+      "scores": [
+        0,
+        20,
+        95,
+        25,
+        0,
+        0,
+        45,
+        80,
+        0,
+        80
+      ],
+      "matched_count": 3,
+      "email_sent": true
+    },
+    {
+      "status": "success",
       "timestamp": "2026-06-23T00:13:22.004356Z",
       "saramin_count": 0,
       "wanted_count": 35,
@@ -246,12 +267,42 @@
       "score": 75,
       "reason": "커머스 PO 직무 및 도메인 적합하며 CPO 경험 우수하나, 시니어(7년차 이상) 경력 조건에 미달합니다.",
       "scored_at": "2026-06-22T00:17:45.292522Z"
+    },
+    {
+      "title": "[APLUS AI] 디스커버리 AI PM",
+      "company": "버즈니(Buzzni)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/370386",
+      "source": "wanted",
+      "score": 95,
+      "reason": "AI 활용 및 커머스 플랫폼 CPO 경험이 AI PM 직무와 회사 특성에 매우 부합함.",
+      "scored_at": "2026-06-24T00:03:21.536791Z"
+    },
+    {
+      "title": "교육 PM",
+      "company": "코드잇(codeit)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/370258",
+      "source": "wanted",
+      "score": 80,
+      "reason": "PM 역량과 서비스 기획 경험은 우수하나, 교육 도메인 경험이 부족합니다.",
+      "scored_at": "2026-06-24T00:03:21.536791Z"
+    },
+    {
+      "title": "의료IT 정부과제 R&D PM/기획",
+      "company": "피플앤드테크놀러지",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/370217",
+      "source": "wanted",
+      "score": 80,
+      "reason": "PM/기획 직무, 경력, 근무지 일치. 의료IT 도메인 경험은 없으나, 제품 리드 및 R&D 역량 우수.",
+      "scored_at": "2026-06-24T00:03:21.536791Z"
     }
   ],
   "totals": {
-    "runs": 4,
-    "jobs_matched": 16,
-    "emails_sent": 2
+    "runs": 5,
+    "jobs_matched": 19,
+    "emails_sent": 3
   },
-  "last_updated": "2026-06-23T00:13:29.641953Z"
+  "last_updated": "2026-06-24T00:05:02.652808Z"
 }
