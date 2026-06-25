@@ -2,6 +2,27 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-06-25T00:18:11.578926Z",
+      "saramin_count": 0,
+      "wanted_count": 36,
+      "new_count": 10,
+      "scores": [
+        25,
+        92,
+        80,
+        65,
+        65,
+        55,
+        95,
+        50,
+        92,
+        90
+      ],
+      "matched_count": 5,
+      "email_sent": true
+    },
+    {
+      "status": "success",
       "timestamp": "2026-06-24T00:03:21.536791Z",
       "saramin_count": 0,
       "wanted_count": 37,
@@ -297,12 +318,62 @@
       "score": 80,
       "reason": "PM/기획 직무, 경력, 근무지 일치. 의료IT 도메인 경험은 없으나, 제품 리드 및 R&D 역량 우수.",
       "scored_at": "2026-06-24T00:03:21.536791Z"
+    },
+    {
+      "title": "서비스기획/PM (4-10년) [역삼역]",
+      "company": "모멘티",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/370553",
+      "source": "wanted",
+      "score": 92,
+      "reason": "직무, 경력, 근무지 완벽 일치하며 AI 활용 경험이 유망 스타트업과 시너지.",
+      "scored_at": "2026-06-25T00:18:11.578926Z"
+    },
+    {
+      "title": "B2B 사업개발 PM(수주·운영)",
+      "company": "커넥팅더닷츠(째깍악어)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/370655",
+      "source": "wanted",
+      "score": 80,
+      "reason": "PM 직무 및 플랫폼 산업군 일치, B2B 시스템/정책 설계 경험 보유.",
+      "scored_at": "2026-06-25T00:18:11.578926Z"
+    },
+    {
+      "title": "서비스기획/PM (4-10년) [역삼역]",
+      "company": "모멘티",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/370553",
+      "source": "wanted",
+      "score": 95,
+      "reason": "직무, 경력, 근무지 모두 적합하며, AI 활용 경험이 큰 강점입니다.",
+      "scored_at": "2026-06-25T00:18:11.578926Z"
+    },
+    {
+      "title": "Global Product Development",
+      "company": "아모레퍼시픽(AMOREPACIFIC)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/370461",
+      "source": "wanted",
+      "score": 92,
+      "reason": "CPO 경험과 제품 전체 라이프사이클 리드 역량이 글로벌 PM 직무에 매우 적합함.",
+      "scored_at": "2026-06-25T00:18:11.578926Z"
+    },
+    {
+      "title": "서비스 기획자 또는 PM (3-6년)",
+      "company": "매쓰홀릭",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/370444",
+      "source": "wanted",
+      "score": 90,
+      "reason": "경력, 직무, 근무지 완벽 일치하며, 플랫폼 PM 역량 탁월.",
+      "scored_at": "2026-06-25T00:18:11.578926Z"
     }
   ],
   "totals": {
-    "runs": 5,
-    "jobs_matched": 19,
-    "emails_sent": 3
+    "runs": 6,
+    "jobs_matched": 24,
+    "emails_sent": 4
   },
-  "last_updated": "2026-06-24T00:05:02.652808Z"
+  "last_updated": "2026-06-25T00:20:06.777809Z"
 }
