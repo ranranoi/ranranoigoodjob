@@ -2,6 +2,23 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-06-27T00:14:03.572819Z",
+      "saramin_count": 0,
+      "wanted_count": 35,
+      "new_count": 6,
+      "scores": [
+        55,
+        25,
+        55,
+        90,
+        10,
+        93
+      ],
+      "matched_count": 2,
+      "email_sent": true
+    },
+    {
+      "status": "success",
       "timestamp": "2026-06-26T00:15:17.664902Z",
       "saramin_count": 0,
       "wanted_count": 35,
@@ -497,12 +514,32 @@
       "score": 75,
       "reason": "직무, 경력, 위치는 적합하나, 희망 산업군과 기업 규모가 다소 차이가 있습니다.",
       "scored_at": "2026-06-26T00:15:17.664902Z"
+    },
+    {
+      "title": "Senior PM / Project Manager (5년 이상)",
+      "company": "위버스마인드",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/371137",
+      "source": "wanted",
+      "score": 90,
+      "reason": "경력, 직무, 근무지 모두 적합하며 CPO 경험과 AI 활용 역량이 강점.",
+      "scored_at": "2026-06-27T00:14:03.572819Z"
+    },
+    {
+      "title": "신규 설립 PM",
+      "company": "케어링",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/371135",
+      "source": "wanted",
+      "score": 93,
+      "reason": "CPO 경험으로 신규 서비스 기획/구축 역량이 뛰어나며, 희망 조건과 잘 부합합니다.",
+      "scored_at": "2026-06-27T00:14:03.572819Z"
     }
   ],
   "totals": {
-    "runs": 7,
-    "jobs_matched": 34,
-    "emails_sent": 5
+    "runs": 8,
+    "jobs_matched": 36,
+    "emails_sent": 6
   },
-  "last_updated": "2026-06-26T00:18:02.915372Z"
+  "last_updated": "2026-06-27T00:14:54.587107Z"
 }
