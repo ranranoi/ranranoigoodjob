@@ -2,6 +2,27 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-06-30T00:11:18.538689Z",
+      "saramin_count": 0,
+      "wanted_count": 35,
+      "new_count": 10,
+      "scores": [
+        5,
+        85,
+        10,
+        0,
+        95,
+        90,
+        95,
+        20,
+        5,
+        5
+      ],
+      "matched_count": 4,
+      "email_sent": true
+    },
+    {
+      "status": "success",
       "timestamp": "2026-06-29T00:13:18.048513Z",
       "saramin_count": 0,
       "wanted_count": 35,
@@ -554,12 +575,52 @@
       "score": 93,
       "reason": "CPO 경험으로 신규 서비스 기획/구축 역량이 뛰어나며, 희망 조건과 잘 부합합니다.",
       "scored_at": "2026-06-27T00:14:03.572819Z"
+    },
+    {
+      "title": "기술지원 PM (솔루션 구축 및 고객 기술지원)",
+      "company": "제이제이앤컴퍼니스",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/371570",
+      "source": "wanted",
+      "score": 85,
+      "reason": "솔루션 구축 경험과 핀테크/보험 도메인 전문성이 높아 적합합니다.",
+      "scored_at": "2026-06-30T00:11:18.538689Z"
+    },
+    {
+      "title": "프로덕트 매니저(PM)",
+      "company": "포스타입",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/371448",
+      "source": "wanted",
+      "score": 95,
+      "reason": "PM 직무 희망, 5년차 경력, 플랫폼 서비스 구축 경험이 포스타입에 매우 적합.",
+      "scored_at": "2026-06-30T00:11:18.538689Z"
+    },
+    {
+      "title": "[ESTsoft] 일본 사업개발 및 Product PM",
+      "company": "이스트소프트(ESTsoft)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/371338",
+      "source": "wanted",
+      "score": 90,
+      "reason": "PM 직무, 경력, 근무지, 기업 규모 모두 적합하며, CPO 경험이 사업개발 PM에 강점.",
+      "scored_at": "2026-06-30T00:11:18.538689Z"
+    },
+    {
+      "title": "PMO Lead",
+      "company": "부릉",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/371336",
+      "source": "wanted",
+      "score": 95,
+      "reason": "CPO 경험과 제품 전체 라이프사이클 리드 역량이 PMO Lead 직무에 매우 적합함.",
+      "scored_at": "2026-06-30T00:11:18.538689Z"
     }
   ],
   "totals": {
-    "runs": 10,
-    "jobs_matched": 36,
-    "emails_sent": 6
+    "runs": 11,
+    "jobs_matched": 40,
+    "emails_sent": 7
   },
-  "last_updated": "2026-06-29T00:13:18.048541Z"
+  "last_updated": "2026-06-30T00:12:32.270089Z"
 }
