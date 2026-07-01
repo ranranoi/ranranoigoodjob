@@ -2,6 +2,26 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-07-01T00:13:17.305497Z",
+      "saramin_count": 0,
+      "wanted_count": 34,
+      "new_count": 9,
+      "scores": [
+        88,
+        95,
+        92,
+        80,
+        65,
+        15,
+        25,
+        0,
+        93
+      ],
+      "matched_count": 5,
+      "email_sent": true
+    },
+    {
+      "status": "success",
       "timestamp": "2026-06-30T00:11:18.538689Z",
       "saramin_count": 0,
       "wanted_count": 35,
@@ -615,12 +635,62 @@
       "score": 95,
       "reason": "CPO 경험과 제품 전체 라이프사이클 리드 역량이 PMO Lead 직무에 매우 적합함.",
       "scored_at": "2026-06-30T00:11:18.538689Z"
+    },
+    {
+      "title": "전략기획팀 서비스기획 매니저",
+      "company": "빅케어",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/371813",
+      "source": "wanted",
+      "score": 88,
+      "reason": "서비스기획 직무, 경력, 서울 근무지 모두 적합. 기업 규모만 불확실.",
+      "scored_at": "2026-07-01T00:13:17.305497Z"
+    },
+    {
+      "title": "금융·에너지·신사업 PM",
+      "company": "블루아이즈테크",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/371818",
+      "source": "wanted",
+      "score": 95,
+      "reason": "금융/신사업 PM 직무에 CPO 경험과 금융/보험 도메인 전문성이 매우 적합하며, 희망 조건과도 잘 맞습니다.",
+      "scored_at": "2026-07-01T00:13:17.305497Z"
+    },
+    {
+      "title": "[H2O KOREA] Product PO/PM",
+      "company": "에이치투오호스피탈리티",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/371757",
+      "source": "wanted",
+      "score": 92,
+      "reason": "PM 직무, 서울 근무지, 플랫폼 서비스 구축/운영 경험이 매우 적합함.",
+      "scored_at": "2026-07-01T00:13:17.305497Z"
+    },
+    {
+      "title": "[H2O KOREA] TPM",
+      "company": "에이치투오호스피탈리티",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/371745",
+      "source": "wanted",
+      "score": 80,
+      "reason": "플랫폼 서비스 기획/PM 경험과 기술 이해도가 TPM 직무 및 회사 업종과 잘 부합함.",
+      "scored_at": "2026-07-01T00:13:17.305497Z"
+    },
+    {
+      "title": "서비스 기획/PM [3~8년]",
+      "company": "어스얼라이언스",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/371553",
+      "source": "wanted",
+      "score": 93,
+      "reason": "직무, 경력, 근무지 완벽 일치하며, 다양한 서비스 기획 경험이 강점입니다.",
+      "scored_at": "2026-07-01T00:13:17.305497Z"
     }
   ],
   "totals": {
-    "runs": 11,
-    "jobs_matched": 40,
-    "emails_sent": 7
+    "runs": 12,
+    "jobs_matched": 45,
+    "emails_sent": 8
   },
-  "last_updated": "2026-06-30T00:12:32.270089Z"
+  "last_updated": "2026-07-01T00:14:41.785821Z"
 }
