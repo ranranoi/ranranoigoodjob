@@ -2,6 +2,29 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-07-02T00:14:25.096872Z",
+      "saramin_count": 0,
+      "wanted_count": 36,
+      "new_count": 12,
+      "scores": [
+        45,
+        80,
+        35,
+        45,
+        35,
+        75,
+        93,
+        25,
+        92,
+        93,
+        45,
+        95
+      ],
+      "matched_count": 6,
+      "email_sent": true
+    },
+    {
+      "status": "success",
       "timestamp": "2026-07-01T00:13:17.305497Z",
       "saramin_count": 0,
       "wanted_count": 34,
@@ -685,12 +708,72 @@
       "score": 93,
       "reason": "직무, 경력, 근무지 완벽 일치하며, 다양한 서비스 기획 경험이 강점입니다.",
       "scored_at": "2026-07-01T00:13:17.305497Z"
+    },
+    {
+      "title": "CEO STAFF/PMO",
+      "company": "비전스페이스",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/372256",
+      "source": "wanted",
+      "score": 80,
+      "reason": "CPO 경험과 제품 라이프사이클 리드 역량이 CEO STAFF/PMO 직무에 적합하나, 산업군이 다소 상이함.",
+      "scored_at": "2026-07-02T00:14:25.096872Z"
+    },
+    {
+      "title": "PM 컨설턴트 (브랜드 마케팅)",
+      "company": "레페리(Leferi)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/372210",
+      "source": "wanted",
+      "score": 75,
+      "reason": "PM 직무, 서울 근무, 회사 규모는 적합하나, '브랜드 마케팅' 특화 역할은 핵심 역량과 다소 차이.",
+      "scored_at": "2026-07-02T00:14:25.096872Z"
+    },
+    {
+      "title": "CS/CX 및 운영PM (2년 이상)",
+      "company": "슬레이트미디어",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/372123",
+      "source": "wanted",
+      "score": 93,
+      "reason": "CPO 경험을 통한 CS/정책 설계 및 운영 시스템 구축 역량이 운영PM 직무에 매우 적합함.",
+      "scored_at": "2026-07-02T00:14:25.096872Z"
+    },
+    {
+      "title": "프로덕트 매니저(PM) - 주니어 (5년 미만)",
+      "company": "스포카",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/371998",
+      "source": "wanted",
+      "score": 92,
+      "reason": "PM 직무, 경력, 근무지 모두 적합하며, 플랫폼 서비스 기획 및 제품 전체 리드 경험이 강점입니다.",
+      "scored_at": "2026-07-02T00:14:25.096872Z"
+    },
+    {
+      "title": "뷰티 디바이스 제품 PM",
+      "company": "앳홈",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/371990",
+      "source": "wanted",
+      "score": 93,
+      "reason": "구직자의 PM/서비스기획 경력과 제품 전체 라이프사이클 리드 경험이 뷰티 디바이스 PM 직무에 매우 적합합니다.",
+      "scored_at": "2026-07-02T00:14:25.096872Z"
+    },
+    {
+      "title": "PM Lead (시니어 PM)",
+      "company": "버핏서울",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/371869",
+      "source": "wanted",
+      "score": 95,
+      "reason": "CPO 경험과 커머스/플랫폼 기획 역량이 시니어 PM 직무에 매우 적합합니다.",
+      "scored_at": "2026-07-02T00:14:25.096872Z"
     }
   ],
   "totals": {
-    "runs": 12,
-    "jobs_matched": 45,
-    "emails_sent": 8
+    "runs": 13,
+    "jobs_matched": 51,
+    "emails_sent": 9
   },
-  "last_updated": "2026-07-01T00:14:41.785821Z"
+  "last_updated": "2026-07-02T00:16:12.366923Z"
 }
