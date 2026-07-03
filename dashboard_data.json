@@ -2,6 +2,27 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-07-03T00:11:52.177212Z",
+      "saramin_count": 0,
+      "wanted_count": 36,
+      "new_count": 10,
+      "scores": [
+        5,
+        88,
+        78,
+        60,
+        95,
+        65,
+        25,
+        25,
+        90,
+        15
+      ],
+      "matched_count": 4,
+      "email_sent": true
+    },
+    {
+      "status": "success",
       "timestamp": "2026-07-02T00:14:25.096872Z",
       "saramin_count": 0,
       "wanted_count": 36,
@@ -768,12 +789,52 @@
       "score": 95,
       "reason": "CPO 경험과 커머스/플랫폼 기획 역량이 시니어 PM 직무에 매우 적합합니다.",
       "scored_at": "2026-07-02T00:14:25.096872Z"
+    },
+    {
+      "title": "제품화 기획 및 PM",
+      "company": "씨메스로보틱스",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/372489",
+      "source": "wanted",
+      "score": 88,
+      "reason": "제품화 기획 및 PM 직무와 경력 수준이 잘 맞고, AI 활용 경험도 강점입니다.",
+      "scored_at": "2026-07-03T00:11:52.177212Z"
+    },
+    {
+      "title": "Physical AI 기획 및 PM",
+      "company": "씨메스로보틱스",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/372486",
+      "source": "wanted",
+      "score": 78,
+      "reason": "AI 시스템 기획 및 PM 역량이 뛰어나지만, 로봇/하드웨어 도메인 경험은 부족합니다.",
+      "scored_at": "2026-07-03T00:11:52.177212Z"
+    },
+    {
+      "title": "AI PM (IMPACT MAKER)",
+      "company": "멋쟁이사자처럼",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/372477",
+      "source": "wanted",
+      "score": 95,
+      "reason": "AI PM 직무에 필요한 PM 역량과 AI 활용/기획 경험이 매우 뛰어나 적합합니다.",
+      "scored_at": "2026-07-03T00:11:52.177212Z"
+    },
+    {
+      "title": "Charging – Development Manager, Seoul, Korea",
+      "company": "테슬라(Tesla)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/372356",
+      "source": "wanted",
+      "score": 90,
+      "reason": "테슬라의 대기업 규모와 서울 근무지 조건에 부합하며, CPO 경험을 통한 서비스 기획 및 제품 전체 라이프사이클 리드 역량이 'Development Manager' 역할에 매우 적합합니다.",
+      "scored_at": "2026-07-03T00:11:52.177212Z"
     }
   ],
   "totals": {
-    "runs": 13,
-    "jobs_matched": 51,
-    "emails_sent": 9
+    "runs": 14,
+    "jobs_matched": 55,
+    "emails_sent": 10
   },
-  "last_updated": "2026-07-02T00:16:12.366923Z"
+  "last_updated": "2026-07-03T00:13:17.845231Z"
 }
