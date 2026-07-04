@@ -2,6 +2,18 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-07-04T00:10:22.064896Z",
+      "saramin_count": 0,
+      "wanted_count": 36,
+      "new_count": 1,
+      "scores": [
+        90
+      ],
+      "matched_count": 1,
+      "email_sent": true
+    },
+    {
+      "status": "success",
       "timestamp": "2026-07-03T00:11:52.177212Z",
       "saramin_count": 0,
       "wanted_count": 36,
@@ -829,12 +841,22 @@
       "score": 90,
       "reason": "테슬라의 대기업 규모와 서울 근무지 조건에 부합하며, CPO 경험을 통한 서비스 기획 및 제품 전체 라이프사이클 리드 역량이 'Development Manager' 역할에 매우 적합합니다.",
       "scored_at": "2026-07-03T00:11:52.177212Z"
+    },
+    {
+      "title": "식품 제조 B2B SaaS PM & UXUI 3년 이상",
+      "company": "퓨처센스(FutureSense)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/372661",
+      "source": "wanted",
+      "score": 90,
+      "reason": "PM/UXUI 직무, 경력, 근무지 적합하며 B2B SaaS에 필요한 시스템 기획 역량이 뛰어납니다.",
+      "scored_at": "2026-07-04T00:10:22.064896Z"
     }
   ],
   "totals": {
-    "runs": 14,
-    "jobs_matched": 55,
-    "emails_sent": 10
+    "runs": 15,
+    "jobs_matched": 56,
+    "emails_sent": 11
   },
-  "last_updated": "2026-07-03T00:13:17.845231Z"
+  "last_updated": "2026-07-04T00:10:33.208761Z"
 }
