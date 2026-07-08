@@ -2,6 +2,28 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-07-08T00:03:02.415033Z",
+      "saramin_count": 0,
+      "wanted_count": 34,
+      "new_count": 11,
+      "scores": [
+        0,
+        0,
+        0,
+        95,
+        0,
+        0,
+        0,
+        0,
+        15,
+        0,
+        0
+      ],
+      "matched_count": 1,
+      "email_sent": true
+    },
+    {
+      "status": "success",
       "timestamp": "2026-07-07T00:14:13.291748Z",
       "saramin_count": 0,
       "wanted_count": 36,
@@ -962,12 +984,22 @@
       "score": 85,
       "reason": "PM/PO 책임자 직무, 서울 근무지, 5년 경력 적합. 기업 규모는 불확실.",
       "scored_at": "2026-07-07T00:14:13.291748Z"
+    },
+    {
+      "title": "PM (Product Manager)",
+      "company": "빗썸",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/373385",
+      "source": "wanted",
+      "score": 95,
+      "reason": "핀테크 플랫폼 PM 직무로, CPO 경험과 서비스 기획/데이터 분석 역량이 매우 적합합니다.",
+      "scored_at": "2026-07-08T00:03:02.415033Z"
     }
   ],
   "totals": {
-    "runs": 18,
-    "jobs_matched": 63,
-    "emails_sent": 12
+    "runs": 19,
+    "jobs_matched": 64,
+    "emails_sent": 13
   },
-  "last_updated": "2026-07-07T00:15:38.053251Z"
+  "last_updated": "2026-07-08T00:03:43.727008Z"
 }
