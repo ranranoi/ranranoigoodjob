@@ -2,6 +2,25 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-07-10T00:10:42.431008Z",
+      "saramin_count": 0,
+      "wanted_count": 35,
+      "new_count": 8,
+      "scores": [
+        85,
+        90,
+        92,
+        92,
+        15,
+        35,
+        80,
+        90
+      ],
+      "matched_count": 6,
+      "email_sent": true
+    },
+    {
+      "status": "success",
       "timestamp": "2026-07-09T00:16:43.241583Z",
       "saramin_count": 0,
       "wanted_count": 35,
@@ -1053,12 +1072,72 @@
       "score": 85,
       "reason": "AI 활용 및 PM 역량이 공고와 매우 부합하나, 기업 규모 정보가 불확실합니다.",
       "scored_at": "2026-07-09T00:16:43.241583Z"
+    },
+    {
+      "title": "서비스기획(4년이상)",
+      "company": "럭스로보(LUXROBO)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/373800",
+      "source": "wanted",
+      "score": 85,
+      "reason": "서비스기획 직무, 경력, 근무지 적합하며, 플랫폼 구축 및 제품 전체 리드 경험이 강점.",
+      "scored_at": "2026-07-10T00:10:42.431008Z"
+    },
+    {
+      "title": "서비스기획(4년이상)",
+      "company": "럭스로보(LUXROBO)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/373798",
+      "source": "wanted",
+      "score": 90,
+      "reason": "희망 직무/경력/근무지 일치하며, AI 활용 경험 등 핵심 역량이 공고와 잘 부합합니다.",
+      "scored_at": "2026-07-10T00:10:42.431008Z"
+    },
+    {
+      "title": "머신 러닝 기반 데이터 분석 사업관리(PM)",
+      "company": "코데이터솔루션",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/374093",
+      "source": "wanted",
+      "score": 92,
+      "reason": "구직자의 데이터 분석 및 AI 활용 역량이 머신러닝 기반 PM 직무에 매우 적합하며, 희망 직무/근무지도 일치합니다.",
+      "scored_at": "2026-07-10T00:10:42.431008Z"
+    },
+    {
+      "title": "Senior Product Manager (PM Team Lead)",
+      "company": "오렌지스퀘어",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/373907",
+      "source": "wanted",
+      "score": 92,
+      "reason": "CPO 경력과 플랫폼 서비스 기획 역량이 Senior PM/Team Lead 직무에 매우 적합함.",
+      "scored_at": "2026-07-10T00:10:42.431008Z"
+    },
+    {
+      "title": "제품기획/PM(4년이상)",
+      "company": "럭스로보(LUXROBO)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/373805",
+      "source": "wanted",
+      "score": 80,
+      "reason": "PM 직무, 경력, 근무지 적합. 로봇/교육 도메인 경험은 부족하나 제품 리드 역량 우수.",
+      "scored_at": "2026-07-10T00:10:42.431008Z"
+    },
+    {
+      "title": "데이터플랫폼 사업관리(PM)",
+      "company": "코데이터솔루션",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/373322",
+      "source": "wanted",
+      "score": 90,
+      "reason": "데이터플랫폼 PM 직무와 구직자의 플랫폼 기획, 데이터 분석, AI 역량이 잘 맞음.",
+      "scored_at": "2026-07-10T00:10:42.431008Z"
     }
   ],
   "totals": {
-    "runs": 20,
-    "jobs_matched": 68,
-    "emails_sent": 14
+    "runs": 21,
+    "jobs_matched": 74,
+    "emails_sent": 15
   },
-  "last_updated": "2026-07-09T00:17:58.963116Z"
+  "last_updated": "2026-07-10T00:11:50.551267Z"
 }
