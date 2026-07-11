@@ -2,6 +2,30 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-07-11T00:03:31.561562Z",
+      "saramin_count": 0,
+      "wanted_count": 33,
+      "new_count": 13,
+      "scores": [
+        0,
+        78,
+        88,
+        25,
+        35,
+        5,
+        65,
+        88,
+        93,
+        0,
+        5,
+        25,
+        0
+      ],
+      "matched_count": 4,
+      "email_sent": true
+    },
+    {
+      "status": "success",
       "timestamp": "2026-07-10T00:10:42.431008Z",
       "saramin_count": 0,
       "wanted_count": 35,
@@ -1132,12 +1156,52 @@
       "score": 90,
       "reason": "데이터플랫폼 PM 직무와 구직자의 플랫폼 기획, 데이터 분석, AI 역량이 잘 맞음.",
       "scored_at": "2026-07-10T00:10:42.431008Z"
+    },
+    {
+      "title": "프로덕트 매니저 PM",
+      "company": "스파크펫",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/374263",
+      "source": "wanted",
+      "score": 78,
+      "reason": "핵심 역량, 직무, 근무지는 적합하나, 기업 규모와 경력 조건이 불확실하여 보수적 채점.",
+      "scored_at": "2026-07-11T00:03:31.561562Z"
+    },
+    {
+      "title": "[AI 헬스케어] 사업기획(PM)",
+      "company": "스트레스솔루션",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/374228",
+      "source": "wanted",
+      "score": 88,
+      "reason": "AI 역량과 PM/사업기획 경험이 AI 헬스케어 직무에 매우 적합함.",
+      "scored_at": "2026-07-11T00:03:31.561562Z"
+    },
+    {
+      "title": "[underdogs] 글로벌 사업 PM (India)",
+      "company": "유디임팩트",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/374120",
+      "source": "wanted",
+      "score": 88,
+      "reason": "PM 역할, 서울 근무지 적합. CPO 경험으로 글로벌 사업 역량 충분하나, 기업 규모는 불확실.",
+      "scored_at": "2026-07-11T00:03:31.561562Z"
+    },
+    {
+      "title": "[B2B/B2H] 솔닥 파트너스 PM",
+      "company": "솔닥",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/374106",
+      "source": "wanted",
+      "score": 93,
+      "reason": "PM 직무, 서울 근무지, 플랫폼/보험/커머스 경험이 헬스케어 B2B/B2H PM 역할에 매우 적합합니다.",
+      "scored_at": "2026-07-11T00:03:31.561562Z"
     }
   ],
   "totals": {
-    "runs": 21,
-    "jobs_matched": 74,
-    "emails_sent": 15
+    "runs": 22,
+    "jobs_matched": 78,
+    "emails_sent": 16
   },
-  "last_updated": "2026-07-10T00:11:50.551267Z"
+  "last_updated": "2026-07-11T00:05:26.266618Z"
 }
