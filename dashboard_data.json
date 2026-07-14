@@ -2,6 +2,24 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-07-14T23:56:40.847863Z",
+      "saramin_count": 0,
+      "wanted_count": 37,
+      "new_count": 7,
+      "scores": [
+        15,
+        60,
+        25,
+        55,
+        95,
+        90,
+        70
+      ],
+      "matched_count": 3,
+      "email_sent": true
+    },
+    {
+      "status": "success",
       "timestamp": "2026-07-13T23:57:55.457776Z",
       "saramin_count": 0,
       "wanted_count": 33,
@@ -1324,12 +1342,42 @@
       "score": 90,
       "reason": "PM 직무, 경력, 근무지, 기업 규모 모두 적합하며, 플랫폼 서비스 기획 경험이 강점.",
       "scored_at": "2026-07-13T23:57:55.457776Z"
+    },
+    {
+      "title": "[쿠팡] 카탈로그 Taxonomy 및 데이터 분석 PM",
+      "company": "쿠팡",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/374868",
+      "source": "wanted",
+      "score": 95,
+      "reason": "커머스 PM 경력과 데이터 분석 역량이 쿠팡 카탈로그 Taxonomy 및 데이터 분석 PM 직무에 매우 적합함.",
+      "scored_at": "2026-07-14T23:56:40.847863Z"
+    },
+    {
+      "title": "PM(Product Manager)",
+      "company": "테크타카(ARGO)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/374811",
+      "source": "wanted",
+      "score": 90,
+      "reason": "PM 직무, 서울 근무지, 플랫폼/커머스 경험이 물류 테크 PM에 매우 적합합니다.",
+      "scored_at": "2026-07-14T23:56:40.847863Z"
+    },
+    {
+      "title": "화장품 제품개발 매니저 (PM)",
+      "company": "샘린뷰티",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/374703",
+      "source": "wanted",
+      "score": 70,
+      "reason": "직무, 경력, 근무지는 적합하나, 희망 기업 규모 정보가 불확실하여 보수적으로 채점했습니다.",
+      "scored_at": "2026-07-14T23:56:40.847863Z"
     }
   ],
   "totals": {
-    "runs": 25,
-    "jobs_matched": 86,
-    "emails_sent": 17
+    "runs": 26,
+    "jobs_matched": 89,
+    "emails_sent": 18
   },
-  "last_updated": "2026-07-14T00:00:39.479860Z"
+  "last_updated": "2026-07-14T23:57:49.499952Z"
 }
