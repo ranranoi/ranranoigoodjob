@@ -2,6 +2,32 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-07-13T23:57:55.457776Z",
+      "saramin_count": 0,
+      "wanted_count": 33,
+      "new_count": 15,
+      "scores": [
+        90,
+        80,
+        15,
+        35,
+        75,
+        15,
+        35,
+        15,
+        85,
+        75,
+        15,
+        98,
+        75,
+        90,
+        0
+      ],
+      "matched_count": 8,
+      "email_sent": true
+    },
+    {
+      "status": "success",
       "timestamp": "2026-07-13T00:00:11.036672Z",
       "saramin_count": 0,
       "wanted_count": 34,
@@ -1218,12 +1244,92 @@
       "score": 93,
       "reason": "PM 직무, 서울 근무지, 플랫폼/보험/커머스 경험이 헬스케어 B2B/B2H PM 역할에 매우 적합합니다.",
       "scored_at": "2026-07-11T00:03:31.561562Z"
+    },
+    {
+      "title": "서비스기획 PM",
+      "company": "모비고",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/374612",
+      "source": "wanted",
+      "score": 90,
+      "reason": "서비스기획 PM 직무, 경력, 근무지, 플랫폼 경험 모두 적합하나, 기업 규모 정보가 불확실합니다.",
+      "scored_at": "2026-07-13T23:57:55.457776Z"
+    },
+    {
+      "title": "서비스기획 PM 3년 이상",
+      "company": "풀림",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/374575",
+      "source": "wanted",
+      "score": 80,
+      "reason": "PM 직무, 경력, 근무지 모두 적합. 기업 규모 불확실로 보수적 채점.",
+      "scored_at": "2026-07-13T23:57:55.457776Z"
+    },
+    {
+      "title": "서비스기획 PM",
+      "company": "모비고",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/374612",
+      "source": "wanted",
+      "score": 75,
+      "reason": "PM 직무, 서울 근무지, CPO 경험 등 핵심 역량 부합도가 높음.",
+      "scored_at": "2026-07-13T23:57:55.457776Z"
+    },
+    {
+      "title": "서비스기획 PM 3년 이상",
+      "company": "풀림",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/374575",
+      "source": "wanted",
+      "score": 85,
+      "reason": "직무, 경력, 근무지 완벽 일치하며 제품 리드 경험이 풍부하나, 기업 규모 정보가 불확실함.",
+      "scored_at": "2026-07-13T23:57:55.457776Z"
+    },
+    {
+      "title": "개발 PM(Project Manager)",
+      "company": "지비소프트",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/374524",
+      "source": "wanted",
+      "score": 75,
+      "reason": "PM 직무 및 서울 근무지 적합하나, 경력 조건 미기재와 회사 규모 불확실성이 아쉬움.",
+      "scored_at": "2026-07-13T23:57:55.457776Z"
+    },
+    {
+      "title": "글로벌 수익화 전략 PM(5년 이상)",
+      "company": "슈퍼센트",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/374465",
+      "source": "wanted",
+      "score": 98,
+      "reason": "CPO 경험과 수익화 전략 역량이 글로벌 수익화 PM 직무에 매우 적합합니다.",
+      "scored_at": "2026-07-13T23:57:55.457776Z"
+    },
+    {
+      "title": "Project Manager(PM) 팀장",
+      "company": "글로우서울(GlowSeoul)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/374463",
+      "source": "wanted",
+      "score": 75,
+      "reason": "CPO 경험으로 팀장 직무에 적합하나, 주력 분야(커머스/플랫폼)와 산업군이 다소 상이함.",
+      "scored_at": "2026-07-13T23:57:55.457776Z"
+    },
+    {
+      "title": "공간솔루션 PM 담당자(Senior)",
+      "company": "패스트파이브",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/374417",
+      "source": "wanted",
+      "score": 90,
+      "reason": "PM 직무, 경력, 근무지, 기업 규모 모두 적합하며, 플랫폼 서비스 기획 경험이 강점.",
+      "scored_at": "2026-07-13T23:57:55.457776Z"
     }
   ],
   "totals": {
-    "runs": 24,
-    "jobs_matched": 78,
-    "emails_sent": 16
+    "runs": 25,
+    "jobs_matched": 86,
+    "emails_sent": 17
   },
-  "last_updated": "2026-07-13T00:00:34.088785Z"
+  "last_updated": "2026-07-14T00:00:39.479860Z"
 }
