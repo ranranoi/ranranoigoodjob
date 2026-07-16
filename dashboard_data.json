@@ -2,6 +2,27 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-07-16T00:03:12.151835Z",
+      "saramin_count": 0,
+      "wanted_count": 35,
+      "new_count": 10,
+      "scores": [
+        0,
+        95,
+        15,
+        15,
+        40,
+        88,
+        95,
+        95,
+        60,
+        90
+      ],
+      "matched_count": 5,
+      "email_sent": true
+    },
+    {
+      "status": "success",
       "timestamp": "2026-07-14T23:56:40.847863Z",
       "saramin_count": 0,
       "wanted_count": 37,
@@ -1372,12 +1393,62 @@
       "score": 70,
       "reason": "직무, 경력, 근무지는 적합하나, 희망 기업 규모 정보가 불확실하여 보수적으로 채점했습니다.",
       "scored_at": "2026-07-14T23:56:40.847863Z"
+    },
+    {
+      "title": "서비스기획/PM (4-10년) [역삼역]",
+      "company": "모멘티",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/375083",
+      "source": "wanted",
+      "score": 95,
+      "reason": "직무, 경력, 근무지 완벽 일치하며, AI 활용 경험이 회사 특성과 잘 맞음.",
+      "scored_at": "2026-07-16T00:03:12.151835Z"
+    },
+    {
+      "title": "제품기획(Product Manager) 및 제품개발관리(PM)",
+      "company": "아이리버",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/375204",
+      "source": "wanted",
+      "score": 88,
+      "reason": "직무, 근무지, 기업 규모가 잘 맞고, 다양한 제품 라이프사이클 경험이 PM 직무에 적합합니다.",
+      "scored_at": "2026-07-16T00:03:12.151835Z"
+    },
+    {
+      "title": "[의류제조_국내_중견기업] 베트남 의류 PM (5~15년)",
+      "company": "히든스카우트(헤드헌팅)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/375184",
+      "source": "wanted",
+      "score": 95,
+      "reason": "패션 커머스 CPO 경험과 PM 경력이 의류 제조 중견기업의 PM 직무에 매우 적합함.",
+      "scored_at": "2026-07-16T00:03:12.151835Z"
+    },
+    {
+      "title": "프로덕트 매니저 (PM, 핀테크 분야)",
+      "company": "오렌지스퀘어",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/375133",
+      "source": "wanted",
+      "score": 95,
+      "reason": "핀테크 PM 직무에 필요한 서비스 기획 및 성장 주도 경험이 풍부하여 매우 적합합니다.",
+      "scored_at": "2026-07-16T00:03:12.151835Z"
+    },
+    {
+      "title": "서비스기획/PM (4-10년) [역삼역]",
+      "company": "모멘티",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/375083",
+      "source": "wanted",
+      "score": 90,
+      "reason": "직무, 경력, 근무지 완벽 일치하며, AI 활용 경험이 AI 기반 회사에 큰 강점입니다.",
+      "scored_at": "2026-07-16T00:03:12.151835Z"
     }
   ],
   "totals": {
-    "runs": 26,
-    "jobs_matched": 89,
-    "emails_sent": 18
+    "runs": 27,
+    "jobs_matched": 94,
+    "emails_sent": 19
   },
-  "last_updated": "2026-07-14T23:57:49.499952Z"
+  "last_updated": "2026-07-16T00:04:37.639802Z"
 }
