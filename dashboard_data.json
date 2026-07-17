@@ -2,6 +2,16 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-07-17T00:02:12.847149Z",
+      "saramin_count": 0,
+      "wanted_count": 0,
+      "new_count": 0,
+      "scores": [],
+      "matched_count": 0,
+      "email_sent": false
+    },
+    {
+      "status": "success",
       "timestamp": "2026-07-16T00:03:12.151835Z",
       "saramin_count": 0,
       "wanted_count": 35,
@@ -1446,9 +1456,9 @@
     }
   ],
   "totals": {
-    "runs": 27,
+    "runs": 28,
     "jobs_matched": 94,
     "emails_sent": 19
   },
-  "last_updated": "2026-07-16T00:04:37.639802Z"
+  "last_updated": "2026-07-17T00:02:12.847173Z"
 }
