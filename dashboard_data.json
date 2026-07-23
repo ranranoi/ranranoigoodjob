@@ -2,6 +2,36 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-07-23T00:04:37.857503Z",
+      "saramin_count": 0,
+      "wanted_count": 35,
+      "new_count": 19,
+      "scores": [
+        85,
+        75,
+        85,
+        90,
+        88,
+        25,
+        15,
+        95,
+        35,
+        90,
+        10,
+        25,
+        35,
+        80,
+        90,
+        25,
+        0,
+        35,
+        0
+      ],
+      "matched_count": 9,
+      "email_sent": true
+    },
+    {
+      "status": "success",
       "timestamp": "2026-07-21T23:58:40.902722Z",
       "saramin_count": 0,
       "wanted_count": 0,
@@ -1503,12 +1533,102 @@
       "score": 90,
       "reason": "직무, 경력, 근무지 완벽 일치하며, AI 활용 경험이 AI 기반 회사에 큰 강점입니다.",
       "scored_at": "2026-07-16T00:03:12.151835Z"
+    },
+    {
+      "title": "B2B SaaS 서비스기획자 (3년 이상)",
+      "company": "퓨처센스(FutureSense)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/376306",
+      "source": "wanted",
+      "score": 85,
+      "reason": "B2B SaaS 서비스기획 직무와 경력, 핵심 역량이 잘 부합하며, 서울 근무지 희망 조건도 충족합니다.",
+      "scored_at": "2026-07-23T00:04:37.857503Z"
+    },
+    {
+      "title": "전략기획팀 서비스기획 매니저",
+      "company": "빅케어",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/376013",
+      "source": "wanted",
+      "score": 75,
+      "reason": "서비스기획 직무, 서울 근무지, 플랫폼 경험이 구직자의 핵심 역량과 잘 부합합니다.",
+      "scored_at": "2026-07-23T00:04:37.857503Z"
+    },
+    {
+      "title": "사업PM(FoodTech) (2년 이상)",
+      "company": "퓨처센스(FutureSense)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/376309",
+      "source": "wanted",
+      "score": 85,
+      "reason": "PM 직무, 경력, 근무지 일치하며, 커머스/플랫폼 구축 경험이 FoodTech PM에 적합합니다.",
+      "scored_at": "2026-07-23T00:04:37.857503Z"
+    },
+    {
+      "title": "AX Technical PM (5년 이상)",
+      "company": "워트인텔리전스",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/376256",
+      "source": "wanted",
+      "score": 90,
+      "reason": "경력, 근무지, 기업 규모 적합하며, AI 활용 및 시스템 구축 경험이 AX Technical PM 직무에 강점.",
+      "scored_at": "2026-07-23T00:04:37.857503Z"
+    },
+    {
+      "title": "약국 마케팅 PM",
+      "company": "네오심플릭스",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/376207",
+      "source": "wanted",
+      "score": 88,
+      "reason": "PM/서비스 기획 역량과 서울 근무 희망 조건이 잘 맞고, 플랫폼 서비스 경험을 활용할 수 있습니다.",
+      "scored_at": "2026-07-23T00:04:37.857503Z"
+    },
+    {
+      "title": "PM/PO(5~8년)",
+      "company": "랭디",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/376171",
+      "source": "wanted",
+      "score": 95,
+      "reason": "경력, 직무, 근무지 완벽 일치하며, 플랫폼 서비스 기획/성장 경험이 강점입니다.",
+      "scored_at": "2026-07-23T00:04:37.857503Z"
+    },
+    {
+      "title": "[포토이즘] 전사 프로젝트 관리ㆍ프로세스 개선 담당자 (PM/PGM)",
+      "company": "서북",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/376097",
+      "source": "wanted",
+      "score": 90,
+      "reason": "PM/PGM 직무와 5년 경력, 전사 프로젝트 관리 및 프로세스 개선 역량이 잘 부합함.",
+      "scored_at": "2026-07-23T00:04:37.857503Z"
+    },
+    {
+      "title": "[underdogs] 글로벌 사업 PM (India)",
+      "company": "유디임팩트",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/375963",
+      "source": "wanted",
+      "score": 80,
+      "reason": "PM 직무 및 서울 근무지 적합. CPO 경험으로 글로벌 사업 PM 역량 충분.",
+      "scored_at": "2026-07-23T00:04:37.857503Z"
+    },
+    {
+      "title": "[underdogs] AI 창업 프로그램 PM",
+      "company": "유디임팩트",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/375962",
+      "source": "wanted",
+      "score": 90,
+      "reason": "AI 창업 프로그램 PM 역할에 필요한 스타트업 CPO 경험과 AI 활용 역량이 매우 적합합니다.",
+      "scored_at": "2026-07-23T00:04:37.857503Z"
     }
   ],
   "totals": {
-    "runs": 33,
-    "jobs_matched": 94,
-    "emails_sent": 19
+    "runs": 34,
+    "jobs_matched": 103,
+    "emails_sent": 20
   },
-  "last_updated": "2026-07-21T23:58:40.902739Z"
+  "last_updated": "2026-07-23T00:07:33.464619Z"
 }
