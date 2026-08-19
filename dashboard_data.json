@@ -2,6 +2,16 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-08-19T23:27:09.181999Z",
+      "saramin_count": 0,
+      "wanted_count": 0,
+      "new_count": 0,
+      "scores": [],
+      "matched_count": 0,
+      "email_sent": false
+    },
+    {
+      "status": "success",
       "timestamp": "2026-08-18T23:26:34.194448Z",
       "saramin_count": 0,
       "wanted_count": 0,
@@ -626,26 +636,6 @@
         95
       ],
       "matched_count": 6,
-      "email_sent": true
-    },
-    {
-      "status": "success",
-      "timestamp": "2026-07-01T00:13:17.305497Z",
-      "saramin_count": 0,
-      "wanted_count": 34,
-      "new_count": 9,
-      "scores": [
-        88,
-        95,
-        92,
-        80,
-        65,
-        15,
-        25,
-        0,
-        93
-      ],
-      "matched_count": 5,
       "email_sent": true
     }
   ],
@@ -1696,9 +1686,9 @@
     }
   ],
   "totals": {
-    "runs": 61,
+    "runs": 62,
     "jobs_matched": 103,
     "emails_sent": 20
   },
-  "last_updated": "2026-08-18T23:26:34.194469Z"
+  "last_updated": "2026-08-19T23:27:09.182023Z"
 }
