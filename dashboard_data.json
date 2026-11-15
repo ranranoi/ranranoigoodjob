@@ -2,6 +2,47 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-11-15T02:29:00.532257Z",
+      "saramin_count": 0,
+      "wanted_count": 35,
+      "new_count": 30,
+      "scores": [
+        85,
+        85,
+        40,
+        95,
+        88,
+        95,
+        88,
+        90,
+        95,
+        95,
+        85,
+        10,
+        55,
+        93,
+        15,
+        5,
+        88,
+        5,
+        35,
+        5,
+        92,
+        5,
+        95,
+        40,
+        93,
+        10,
+        90,
+        92,
+        80,
+        95
+      ],
+      "matched_count": 19,
+      "email_sent": true
+    },
+    {
+      "status": "success",
       "timestamp": "2026-11-14T02:57:39.533651Z",
       "saramin_count": 0,
       "wanted_count": 0,
@@ -483,16 +524,6 @@
     {
       "status": "success",
       "timestamp": "2026-09-27T01:14:32.277212Z",
-      "saramin_count": 0,
-      "wanted_count": 0,
-      "new_count": 0,
-      "scores": [],
-      "matched_count": 0,
-      "email_sent": false
-    },
-    {
-      "status": "success",
-      "timestamp": "2026-09-26T01:20:51.671158Z",
       "saramin_count": 0,
       "wanted_count": 0,
       "new_count": 0,
@@ -1545,12 +1576,202 @@
       "score": 90,
       "reason": "AI 창업 프로그램 PM 역할에 필요한 스타트업 CPO 경험과 AI 활용 역량이 매우 적합합니다.",
       "scored_at": "2026-07-23T00:04:37.857503Z"
+    },
+    {
+      "title": "서비스기획자",
+      "company": "프랭크스토어",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/398136",
+      "source": "wanted",
+      "score": 85,
+      "reason": "서비스기획 직무, 서울 근무지, 커머스/플랫폼 기획 경험이 프랭크스토어에 적합.",
+      "scored_at": "2026-11-15T02:29:00.532257Z"
+    },
+    {
+      "title": "주니어 PO (Product Owner, 서비스기획, 프로덕트 매니저)",
+      "company": "스매치코퍼레이션",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/397762",
+      "source": "wanted",
+      "score": 85,
+      "reason": "희망 직무와 핵심 역량이 잘 맞고, 플랫폼 PO 경험이 풍부하나 경력 조건이 불분명합니다.",
+      "scored_at": "2026-11-15T02:29:00.532257Z"
+    },
+    {
+      "title": "서비스기획 (PM)",
+      "company": "중고나라",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/393569",
+      "source": "wanted",
+      "score": 95,
+      "reason": "커머스 플랫폼 PM 직무에 5년 경력과 CPO 경험, 핵심 역량이 완벽하게 부합합니다.",
+      "scored_at": "2026-11-15T02:29:00.532257Z"
+    },
+    {
+      "title": "[HYBE] 보안 서비스기획(PM)",
+      "company": "하이브(HYBE)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/393098",
+      "source": "wanted",
+      "score": 88,
+      "reason": "핵심 PM 역량과 대기업 선호 조건에 부합하나, 보안 도메인 경험은 부족합니다.",
+      "scored_at": "2026-11-15T02:29:00.532257Z"
+    },
+    {
+      "title": "서비스기획 파트장 (Product Lead)",
+      "company": "딜리버스",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/391186",
+      "source": "wanted",
+      "score": 95,
+      "reason": "서비스기획 파트장 직무, 5년 경력, 플랫폼 서비스 경험이 완벽히 부합합니다.",
+      "scored_at": "2026-11-15T02:29:00.532257Z"
+    },
+    {
+      "title": "서비스기획자/Product Manager",
+      "company": "그린재킷",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/388805",
+      "source": "wanted",
+      "score": 88,
+      "reason": "희망 직무/근무지 일치, 플랫폼 서비스 CPO 경력 우수하나, 기업 규모 및 경력 조건 불확실.",
+      "scored_at": "2026-11-15T02:29:00.532257Z"
+    },
+    {
+      "title": "영어 에듀테크 서비스 Product Manager (서비스기획, 화면설계, 디자인)",
+      "company": "클래스카드",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/385265",
+      "source": "wanted",
+      "score": 90,
+      "reason": "PM 핵심 역량과 CPO 경험이 직무에 매우 적합하며, 플랫폼 서비스 경험이 에듀테크 분야에도 잘 적용됩니다.",
+      "scored_at": "2026-11-15T02:29:00.532257Z"
+    },
+    {
+      "title": "서비스기획자(Product Manager) 5년이상",
+      "company": "패스트레인(여신티켓)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/381910",
+      "source": "wanted",
+      "score": 95,
+      "reason": "경력, 직무, 희망 산업(핀테크) 완벽 일치. CPO 경험으로 제품 전반 리드 역량 탁월.",
+      "scored_at": "2026-11-15T02:29:00.532257Z"
+    },
+    {
+      "title": "서비스기획자 (5년 이상)",
+      "company": "엘지유플러스볼트업",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/379319",
+      "source": "wanted",
+      "score": 95,
+      "reason": "직무, 경력, 근무지, 기업 규모 모두 완벽히 일치하며, 서비스 기획 역량이 매우 뛰어남.",
+      "scored_at": "2026-11-15T02:29:00.532257Z"
+    },
+    {
+      "title": "[서비스기획] 주주총회 통합 플랫폼 기획자",
+      "company": "아이알큐더스",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/374405",
+      "source": "wanted",
+      "score": 85,
+      "reason": "플랫폼 기획 및 시스템 설계 역량이 뛰어나며, 희망 직무/근무지 일치.",
+      "scored_at": "2026-11-15T02:29:00.532257Z"
+    },
+    {
+      "title": "글로벌 오픈이노베이션 PM",
+      "company": "멋쟁이사자처럼",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/398246",
+      "source": "wanted",
+      "score": 93,
+      "reason": "PM 희망 직무, 5년 경력과 CPO 경험이 글로벌 오픈이노베이션 PM에 매우 적합합니다.",
+      "scored_at": "2026-11-15T02:29:00.532257Z"
+    },
+    {
+      "title": "통합정산 솔루션 PM",
+      "company": "더엠컴퍼니",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/398143",
+      "source": "wanted",
+      "score": 88,
+      "reason": "PM 직무, 서울 근무, 정산 정책 수립 경험이 통합정산 솔루션 PM과 잘 맞음.",
+      "scored_at": "2026-11-15T02:29:00.532257Z"
+    },
+    {
+      "title": "국내 대기업 닷컴 프로젝트 PMO",
+      "company": "콘센트릭스서비스코리아",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/398027",
+      "source": "wanted",
+      "score": 92,
+      "reason": "대기업 닷컴 프로젝트 PMO 직무는 구직자의 5년 경력과 CPO 경험, 희망 조건에 매우 부합합니다.",
+      "scored_at": "2026-11-15T02:29:00.532257Z"
+    },
+    {
+      "title": "프로젝트 매니저 (PM) (5년 이상)",
+      "company": "피치에이아이",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/398005",
+      "source": "wanted",
+      "score": 95,
+      "reason": "5년 경력, PM 직무, AI 활용 경험이 공고와 매우 잘 부합합니다.",
+      "scored_at": "2026-11-15T02:29:00.532257Z"
+    },
+    {
+      "title": "이커머스 IT AX PM 계약직(1년이내)",
+      "company": "아이아이컴바인드",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/397904",
+      "source": "wanted",
+      "score": 93,
+      "reason": "이커머스 PM 직무, 서울 근무지, 경력, 핵심 역량까지 완벽히 부합합니다.",
+      "scored_at": "2026-11-15T02:29:00.532257Z"
+    },
+    {
+      "title": "프로젝트 관리(PM) 디렉터",
+      "company": "엠지알브이",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/397849",
+      "source": "wanted",
+      "score": 90,
+      "reason": "PM 디렉터 직무에 CPO 경험과 플랫폼 서비스 경력이 잘 부합하며, 희망 조건도 충족합니다.",
+      "scored_at": "2026-11-15T02:29:00.532257Z"
+    },
+    {
+      "title": "Technical Program Manager (TPM) (3~5년차)",
+      "company": "클레온",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/397848",
+      "source": "wanted",
+      "score": 92,
+      "reason": "PM 경력과 AI 시스템 기획/활용 경험이 TPM 직무 및 AI 기업에 매우 적합합니다.",
+      "scored_at": "2026-11-15T02:29:00.532257Z"
+    },
+    {
+      "title": "세이펫 반려동물 브랜드 세일즈 마케팅 PM (5~8년차)",
+      "company": "원밀리모어",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/397841",
+      "source": "wanted",
+      "score": 80,
+      "reason": "경력, 근무지 일치하며, 커머스 CPO 경험으로 세일즈 마케팅 PM 역할 수행 가능.",
+      "scored_at": "2026-11-15T02:29:00.532257Z"
+    },
+    {
+      "title": "PM/PO(3~5년)",
+      "company": "랭디",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/397814",
+      "source": "wanted",
+      "score": 95,
+      "reason": "경력, 직무, 근무지 모두 일치하며, 플랫폼 서비스 기획/성장 경험이 풍부하여 적합합니다.",
+      "scored_at": "2026-11-15T02:29:00.532257Z"
     }
   ],
   "totals": {
-    "runs": 148,
-    "jobs_matched": 103,
-    "emails_sent": 20
+    "runs": 149,
+    "jobs_matched": 122,
+    "emails_sent": 21
   },
-  "last_updated": "2026-11-14T02:57:39.533677Z"
+  "last_updated": "2026-11-15T02:33:00.919621Z"
 }
