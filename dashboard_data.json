@@ -2,6 +2,35 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-11-21T03:51:19.762060Z",
+      "saramin_count": 0,
+      "wanted_count": 32,
+      "new_count": 18,
+      "scores": [
+        92,
+        95,
+        85,
+        35,
+        25,
+        20,
+        93,
+        92,
+        5,
+        65,
+        90,
+        90,
+        5,
+        15,
+        98,
+        90,
+        85,
+        55
+      ],
+      "matched_count": 10,
+      "email_sent": true
+    },
+    {
+      "status": "success",
       "timestamp": "2026-11-20T03:54:33.224052Z",
       "saramin_count": 0,
       "wanted_count": 0,
@@ -514,16 +543,6 @@
     {
       "status": "success",
       "timestamp": "2026-10-03T01:48:50.586622Z",
-      "saramin_count": 0,
-      "wanted_count": 0,
-      "new_count": 0,
-      "scores": [],
-      "matched_count": 0,
-      "email_sent": false
-    },
-    {
-      "status": "success",
-      "timestamp": "2026-10-02T02:04:42.220389Z",
       "saramin_count": 0,
       "wanted_count": 0,
       "new_count": 0,
@@ -1766,12 +1785,112 @@
       "score": 95,
       "reason": "경력, 직무, 근무지 모두 일치하며, 플랫폼 서비스 기획/성장 경험이 풍부하여 적합합니다.",
       "scored_at": "2026-11-15T02:29:00.532257Z"
+    },
+    {
+      "title": "[서비스기획/사업화] B2B AI Product Owner (PO)",
+      "company": "브랜빕",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/399221",
+      "source": "wanted",
+      "score": 92,
+      "reason": "AI 제품 리드 경험과 서비스기획/PM 역량이 B2B AI PO 직무에 매우 적합합니다.",
+      "scored_at": "2026-11-21T03:51:19.762060Z"
+    },
+    {
+      "title": "[큐샵] AI 웹빌더 PM·서비스기획 (1~5년)",
+      "company": "스퀘어스",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/398660",
+      "source": "wanted",
+      "score": 95,
+      "reason": "AI 웹빌더 PM 직무에 AI 활용 및 커머스 플랫폼 구축 경험이 매우 적합함.",
+      "scored_at": "2026-11-21T03:51:19.762060Z"
+    },
+    {
+      "title": "Product Manager (PM)",
+      "company": "마야크루",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/399515",
+      "source": "wanted",
+      "score": 85,
+      "reason": "PM 직무, AI/커머스 경험 완벽 부합하나, 기업 규모 불확실.",
+      "scored_at": "2026-11-21T03:51:19.762060Z"
+    },
+    {
+      "title": "[NEWEPICBASE] 글로벌 신사업 기술 PM",
+      "company": "하이브(HYBE)",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/399403",
+      "source": "wanted",
+      "score": 93,
+      "reason": "신사업 기획/구축 경험과 PM 역량이 글로벌 신사업 PM 직무에 매우 적합함.",
+      "scored_at": "2026-11-21T03:51:19.762060Z"
+    },
+    {
+      "title": "[의료 AI] 사업개발 & PM",
+      "company": "뉴로클",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/399327",
+      "source": "wanted",
+      "score": 92,
+      "reason": "AI 시스템 기획/구축 경험과 PM 역량이 의료 AI 분야에 적합하며, 희망 조건과도 잘 부합합니다.",
+      "scored_at": "2026-11-21T03:51:19.762060Z"
+    },
+    {
+      "title": "PM (Project Manager)",
+      "company": "로민",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/399161",
+      "source": "wanted",
+      "score": 90,
+      "reason": "PM 직무, 서울 근무지 희망에 부합하며, CPO 경험과 AI 활용 역량이 강점입니다.",
+      "scored_at": "2026-11-21T03:51:19.762060Z"
+    },
+    {
+      "title": "브랜드 그로스 매니저 (PM)",
+      "company": "블리츠다이나믹스",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/399086",
+      "source": "wanted",
+      "score": 90,
+      "reason": "PM 직무 희망, 서울 근무지 일치, CPO 경험 기반의 그로스 역량 우수.",
+      "scored_at": "2026-11-21T03:51:19.762060Z"
+    },
+    {
+      "title": "[쿠팡] Category Selection 전략 기획 & PM",
+      "company": "쿠팡",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/399054",
+      "source": "wanted",
+      "score": 98,
+      "reason": "커머스 CPO 경력과 전략 기획 역량이 쿠팡 PM 직무에 매우 적합함.",
+      "scored_at": "2026-11-21T03:51:19.762060Z"
+    },
+    {
+      "title": "[3PRO TV] 구독사업 PM",
+      "company": "이브로드캐스팅",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/399030",
+      "source": "wanted",
+      "score": 90,
+      "reason": "PM 직무, 서울 근무지, 경력 모두 적합하며 플랫폼 구축 경험이 강점.",
+      "scored_at": "2026-11-21T03:51:19.762060Z"
+    },
+    {
+      "title": "[3PRO TV] 교육사업(PM) 담당자",
+      "company": "이브로드캐스팅",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/399028",
+      "source": "wanted",
+      "score": 85,
+      "reason": "PM 핵심 역량과 경력이 뛰어나며, 서울 근무 등 희망 조건에 부합하나 교육사업 도메인 경험은 부족.",
+      "scored_at": "2026-11-21T03:51:19.762060Z"
     }
   ],
   "totals": {
-    "runs": 154,
-    "jobs_matched": 122,
-    "emails_sent": 21
+    "runs": 155,
+    "jobs_matched": 132,
+    "emails_sent": 22
   },
-  "last_updated": "2026-11-20T03:54:33.224078Z"
+  "last_updated": "2026-11-21T03:53:57.237789Z"
 }
