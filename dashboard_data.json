@@ -2,6 +2,34 @@
   "runs": [
     {
       "status": "success",
+      "timestamp": "2026-11-27T04:52:53.143011Z",
+      "saramin_count": 0,
+      "wanted_count": 32,
+      "new_count": 17,
+      "scores": [
+        95,
+        88,
+        75,
+        5,
+        92,
+        5,
+        5,
+        5,
+        90,
+        5,
+        25,
+        95,
+        90,
+        75,
+        88,
+        90,
+        90
+      ],
+      "matched_count": 11,
+      "email_sent": true
+    },
+    {
+      "status": "success",
       "timestamp": "2026-11-26T04:48:50.472417Z",
       "saramin_count": 0,
       "wanted_count": 0,
@@ -533,16 +561,6 @@
     {
       "status": "success",
       "timestamp": "2026-10-09T02:51:44.176746Z",
-      "saramin_count": 0,
-      "wanted_count": 0,
-      "new_count": 0,
-      "scores": [],
-      "matched_count": 0,
-      "email_sent": false
-    },
-    {
-      "status": "success",
-      "timestamp": "2026-10-08T02:36:38.818436Z",
       "saramin_count": 0,
       "wanted_count": 0,
       "new_count": 0,
@@ -1885,12 +1903,122 @@
       "score": 85,
       "reason": "PM 핵심 역량과 경력이 뛰어나며, 서울 근무 등 희망 조건에 부합하나 교육사업 도메인 경험은 부족.",
       "scored_at": "2026-11-21T03:51:19.762060Z"
+    },
+    {
+      "title": "비즈니스플랫폼 서비스기획자(3년 이상~)",
+      "company": "도이치모터스",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/399978",
+      "source": "wanted",
+      "score": 95,
+      "reason": "서비스기획 직무, 경력, 근무지 모두 적합하며, 플랫폼 구축 경험이 강점.",
+      "scored_at": "2026-11-27T04:52:53.143011Z"
+    },
+    {
+      "title": "전략기획팀 서비스기획 매니저",
+      "company": "빅케어",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/399848",
+      "source": "wanted",
+      "score": 88,
+      "reason": "서비스기획 직무와 서울 근무지 일치, CPO 경험 등 전략 기획 역량 우수. 경력 조건 및 기업 규모 불확실.",
+      "scored_at": "2026-11-27T04:52:53.143011Z"
+    },
+    {
+      "title": "[의료 AI] 사업개발 & PM",
+      "company": "뉴로클",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/400515",
+      "source": "wanted",
+      "score": 75,
+      "reason": "PM 직무, AI 활용 경험, 성장 기업 선호는 부합하나, 의료 도메인 경험이 없어 보완 필요.",
+      "scored_at": "2026-11-27T04:52:53.143011Z"
+    },
+    {
+      "title": "[쿠팡] 시니어 카탈로그 PM 팀장",
+      "company": "쿠팡",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/400422",
+      "source": "wanted",
+      "score": 92,
+      "reason": "커머스 CPO 경험과 제품 라이프사이클 리드 역량이 쿠팡 카탈로그 PM 팀장에 매우 적합합니다.",
+      "scored_at": "2026-11-27T04:52:53.143011Z"
+    },
+    {
+      "title": "Strategy PM (전략기획 PM)",
+      "company": "딥다이브",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/400166",
+      "source": "wanted",
+      "score": 90,
+      "reason": "전략기획 PM 직무에 부합하는 제품 전체 라이프사이클 리드 및 정책 설계 경험이 풍부함.",
+      "scored_at": "2026-11-27T04:52:53.143011Z"
+    },
+    {
+      "title": "프로덕트 기획자 · PM (3년 이상)",
+      "company": "포토위젯",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/400057",
+      "source": "wanted",
+      "score": 95,
+      "reason": "경력, 직무, 희망 조건(근무지, 산업)이 완벽히 일치하며, CPO 경험이 강점입니다.",
+      "scored_at": "2026-11-27T04:52:53.143011Z"
+    },
+    {
+      "title": "[미닉스] 사업본부장 직속 전략기획 (사업관리/PMO)",
+      "company": "앳홈",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/399997",
+      "source": "wanted",
+      "score": 90,
+      "reason": "CPO 경험과 제품 전체 라이프사이클 리드 역량이 사업본부 직속 전략기획/PMO 직무에 매우 적합합니다.",
+      "scored_at": "2026-11-27T04:52:53.143011Z"
+    },
+    {
+      "title": "[Dr.Reju-All] 약국 마케팅 PM",
+      "company": "네오심플릭스",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/399959",
+      "source": "wanted",
+      "score": 75,
+      "reason": "PM 직무는 적합하나, 약국 도메인과 마케팅 전문성 요구가 핵심 역량과 다소 차이.",
+      "scored_at": "2026-11-27T04:52:53.143011Z"
+    },
+    {
+      "title": "Product Development Manager",
+      "company": "테넥스",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/399923",
+      "source": "wanted",
+      "score": 88,
+      "reason": "PM 직무, 서울 근무지 적합. 5년 경력과 AI 활용 경험이 Product Development Manager 역할에 부합함.",
+      "scored_at": "2026-11-27T04:52:53.143011Z"
+    },
+    {
+      "title": "[bbd] IP Project PM",
+      "company": "비마이프렌즈",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/399881",
+      "source": "wanted",
+      "score": 90,
+      "reason": "PM 직무, 서울 근무지, 플랫폼/커머스 서비스 구축 경험이 잘 부합합니다.",
+      "scored_at": "2026-11-27T04:52:53.143011Z"
+    },
+    {
+      "title": "Data PM",
+      "company": "카디오엑스",
+      "location": "서울",
+      "url": "https://www.wanted.co.kr/wd/399863",
+      "source": "wanted",
+      "score": 90,
+      "reason": "데이터 분석 및 AI 활용 역량이 Data PM 직무에 매우 적합하며, 서울 근무지 희망 조건도 일치합니다.",
+      "scored_at": "2026-11-27T04:52:53.143011Z"
     }
   ],
   "totals": {
-    "runs": 160,
-    "jobs_matched": 132,
-    "emails_sent": 22
+    "runs": 161,
+    "jobs_matched": 143,
+    "emails_sent": 23
   },
-  "last_updated": "2026-11-26T04:48:50.472435Z"
+  "last_updated": "2026-11-27T04:55:07.900900Z"
 }
